@@ -1,0 +1,99 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: travelmate_app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/app/src
+      - ./tests:/app/tests
+      - ./scripts:/app/scripts
+      - ./alembic:/app/alembic
+      - ./data:/app/data
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://travelmate:travelmate_pass@postgres:5432/travelmate_db
+      - REDIS_URL=redis://redis:6379/0
+      - LANGFUSE_HOST=http://langfuse:3000
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - travelmate_net
+
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: travelmate_postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: travelmate
+      POSTGRES_PASSWORD: travelmate_pass
+      POSTGRES_DB: travelmate_db
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U travelmate -d travelmate_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - travelmate_net
+
+  redis:
+    image: redis:7-alpine
+    container_name: travelmate_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - travelmate_net
+
+  langfuse:
+    image: langfuse/langfuse:latest
+    container_name: travelmate_langfuse
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://langfuse:langfuse_pass@langfuse-db:5433/langfuse_db
+      - NEXTAUTH_URL=http://localhost:3000
+      - NEXTAUTH_SECRET=changeme-super-secret-auth-key-1234
+      - SALT=changeme-super-secret-salt-key-1234
+    depends_on:
+      - langfuse-db
+    networks:
+      - travelmate_net
+
+  langfuse-db:
+    image: postgres:16-alpine
+    container_name: travelmate_langfuse_db
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: langfuse
+      POSTGRES_PASSWORD: langfuse_pass
+      POSTGRES_DB: langfuse_db
+    volumes:
+      - langfuse_data:/var/lib/postgresql/data
+    networks:
+      - travelmate_net
+
+volumes:
+  pg_data:
+  redis_data:
+  langfuse_data:
+
+networks:
+  travelmate_net:
+    driver: bridge

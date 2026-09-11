@@ -176,30 +176,32 @@ travelmate-ai/
 │   ├── env.py
 │   └── versions/
 ├── data/
-│   ├── mock_poi_data.json
-│   ├── knowledge_base.json
-│   └── golden_set.json
+│   ├── seed/
+│   │   ├── mock_poi_data.json
+│   │   └── knowledge_base.json
+│   └── evaluation/
+│       └── golden_set.json
 ├── src/
 │   └── travelmate/
 │       ├── __init__.py
-│       ├── main.py                     # FastAPI app factory + lifespan (quản lý pool DB & Redis từ infrastructure)
-│       ├── config.py                   # Pydantic Settings: model, API keys, DB/Redis URLs, prompt version
+│       ├── main.py                     # FastAPI app factory + lifespan
+│       ├── config.py                   # Pydantic Settings
 │       ├── api/                        # API Layer (FastAPI)
 │       │   ├── __init__.py
 │       │   ├── routes_chat.py          # /chat (SSE streaming), /health, /version
-│       │   └── deps.py                 # Dependency Injection (injects AsyncSession, Repositories, SessionStore)
+│       │   └── deps.py                 # Dependency Injection (AsyncSession, Repositories, Stores, Clients)
 │       ├── graph/                      # AI Agent Layer (LangGraph StateGraph)
 │       │   ├── __init__.py
-│       │   ├── state.py                # LangGraph State schema (map với Context State)
+│       │   ├── state.py                # LangGraph State schema
 │       │   ├── builder.py              # StateGraph builder, conditional edges, checkpointer
-│       │   └── nodes/                  # Pure Graph Nodes (chỉ nhận và trả về State, decoupled)
+│       │   └── nodes/                  # Pure Graph Nodes
 │       │       ├── __init__.py
-│       │       ├── context_manager.py  # CMP-03: Retain/Overwrite/Reset/RefResolve (dùng SessionStore)
+│       │       ├── context_manager.py  # CMP-03: Retain/Overwrite/Reset/RefResolve
 │       │       ├── router.py           # CMP-04: LLM intent classification (UC01/UC02/UC03/OOS)
 │       │       ├── resolver.py         # CMP-05: Structured param extraction + provenance
 │       │       ├── tool_orchestrator.py# CMP-07: Tool dispatching qua abstractions
-│       │       ├── evidence_normalizer.py # CMP-08: Chuẩn hoá dữ liệu POI / KB
-│       │       ├── response_generator.py  # CMP-09: Claude streaming grounded evidence
+│       │       ├── evidence_normalizer.py # CMP-08: Chuẩn hoá dữ liệu POI / KB thành Evidence
+│       │       ├── response_generator.py  # CMP-09: LLM streaming grounded evidence qua LLMClient
 │       │       └── safety_guard.py     # CMP-10: Input injection defense & output filtering
 │       ├── tools/                      # Tool layer (Protocols & dispatchers)
 │       │   ├── __init__.py
@@ -208,30 +210,36 @@ travelmate-ai/
 │       │   └── knowledge_search.py     # KB Search Tool (tiêu thụ KbRepositoryProtocol)
 │       ├── rag/                        # RAG Pipeline & Ingestion
 │       │   ├── __init__.py
-│       │   ├── ingestion.py            # Chunking pipeline nạp knowledge_base.json vào infrastructure
-│       │   ├── embeddings.py           # Hugging Face serverless embedding client + key rotation
-│       │   └── retriever.py            # Hybrid retriever interfacing với KbRepository (vector + FTS + RRF)
+│       │   ├── ingestion.py            # Chunking pipeline nạp knowledge_base.json vào database
+│       │   ├── embeddings.py           # Wrapper adapter cho embedding client
+│       │   └── retriever.py            # Hybrid retriever (vector + FTS + RRF)
+│       ├── clients/                    # External Service Clients & SDK Abstractions
+│       │   ├── __init__.py
+│       │   ├── llm_client.py           # LLMClientProtocol + DeepSeek client
+│       │   ├── embedding_client.py     # EmbeddingClientProtocol + HF Serverless client
+│       │   └── langfuse_client.py      # TracerClientProtocol + Langfuse SDK wrapper
 │       ├── infrastructure/             # Shared Infrastructure Layer (SOLID, High Cohesion, Loose Coupling)
 │       │   ├── __init__.py
 │       │   ├── database/               # PostgreSQL 16 + pgvector infrastructure
 │       │   │   ├── __init__.py
-│       │   │   ├── session.py          # Async engine, sessionmaker, lifespan lifecycle & asyncpg pgvector codec
+│       │   │   ├── session.py          # Async engine, sessionmaker, lifespan lifecycle
 │       │   │   ├── models.py           # SQLAlchemy 2.0 Declarative models (poi, kb_chunks, conversation_log)
 │       │   │   └── repositories/       # Concrete Repository Adapters (SRP, DIP, ISP)
 │       │   │       ├── __init__.py
-│       │   │       ├── base.py         # Generic/Base repository protocol
+│       │   │       ├── base.py         # Generic/Base repository protocols
 │       │   │       ├── poi_repo.py     # Relational POI repository (B-tree & GIN filters)
 │       │   │       ├── kb_repo.py      # Knowledge Base chunk repository (HNSW vector + FTS + RRF)
 │       │   │       └── log_repo.py     # Conversation trace & audit log repository
 │       │   └── redis/                  # Redis 7 infrastructure
 │       │       ├── __init__.py
-│       │       ├── client.py           # Async Redis connection pool, ping/health check & lifespan lifecycle
+│       │       ├── client.py           # Async Redis connection pool, ping/health check
 │       │       ├── session_store.py    # Multi-turn Context State store (CMP-03) with TTL
-│       │       └── cache.py            # Tool result caching (idempotency, TTL) & rate limiter backend
+│       │       └── cache.py            # Tool result caching (idempotency, TTL) & rate limiter
 │       ├── schemas/                    # Pydantic v2 schemas
 │       │   ├── __init__.py
 │       │   ├── context.py              # Context State, Parameter Provenance
 │       │   ├── tools.py                # Tool request/response contracts
+│       │   ├── evidence.py             # Common Evidence contract
 │       │   └── trace.py                # Execution Trace Schema (CMP-11)
 │       ├── guardrails/                 # Security & Guardrails
 │       │   ├── __init__.py
@@ -239,8 +247,8 @@ travelmate-ai/
 │       │   └── output_filter.py        # Leak prevention & fake entity filtering
 │       ├── observability/              # Observability & Tracing
 │       │   ├── __init__.py
-│       │   ├── tracer.py               # Langfuse tracing SDK wrapper
-│       │   └── logger.py               # Structured logging (structlog) + correlation ID
+│       │   ├── tracer.py               # Observability tracing integration
+│       │   └── logger.py               # Structured logging (structlog)
 │       └── prompts/                    # Versioned Prompt Management
 │           ├── system_prompt_v1.md     # System instruction policy (CMP-01)
 │           └── registry.py             # Prompt version registry (CMP-12)
@@ -251,9 +259,9 @@ travelmate-ai/
 │   ├── integration/
 │   └── regression/
 └── scripts/
-    ├── seed_poi.py                     # Seed mock_poi_data.json -> bảng poi (PostgreSQL)
-    ├── seed_kb.py                      # Seed knowledge_base.json -> bảng kb_chunks (pgvector)
-    └── eval_langfuse.py                # Chạy regression evaluation dataset trên Langfuse
+    ├── seed_poi.py                     # Seed data/seed/mock_poi_data.json -> bảng poi
+    ├── seed_kb.py                      # Seed data/seed/knowledge_base.json -> bảng kb_chunks
+    └── eval_langfuse.py                # Chạy regression eval với data/evaluation/golden_set.json
 ```
 
 ---

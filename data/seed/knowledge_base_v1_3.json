@@ -1,0 +1,788 @@
+[
+  {
+    "kb_id": "KB_DN_WX_001",
+    "source_id": "DOC_DANANG_TRAVEL_2025",
+    "title": "Thời tiết Đà Nẵng theo mùa",
+    "category": "SEASON_WEATHER",
+    "location": "Đà Nẵng",
+    "content": "Đà Nẵng có khí hậu nhiệt đới gió mùa với hai mùa rõ rệt. Theo các nguồn tổng hợp khí hậu (Climatestotravel, TravelChinaGuide, Vinpearl), mùa khô kéo dài khoảng tháng 1–7/8, nhiệt độ trung bình năm khoảng 24–25°C, cao điểm nắng nóng tháng 6–8 có thể lên 37–40°C. Mùa mưa rơi vào khoảng tháng 8/9–12, lượng mưa lớn nhất thường vào tháng 10–11 (có năm trên 1.300–2.500mm/năm), đây cũng là giai đoạn dễ có bão/áp thấp nhiệt đới ảnh hưởng lịch trình cáp treo Bà Nà Hills và ca-nô ra bán đảo Sơn Trà. Thời điểm được nhiều nguồn khuyến nghị cho du lịch biển là khoảng tháng 2–5, khi ít mưa, biển êm; tháng 6–8 nắng gắt nhưng vẫn đông khách nội địa. Du khách nên theo dõi bản tin thời tiết trước khi tham quan Ngũ Hành Sơn hoặc Bà Nà Hills vào tháng 10–11 vì cáp treo có thể tạm dừng khi có gió mạnh.",
+    "keywords": [
+      "thời tiết Đà Nẵng",
+      "mùa mưa",
+      "mùa khô",
+      "bão miền Trung",
+      "khí hậu Đà Nẵng",
+      "Bà Nà Hills thời tiết"
+    ],
+    "source": "Climatestotravel.com; TravelChinaGuide; Vinpearl Travel Guide",
+    "last_updated": "2026-09-11",
+    "city_alias": [],
+    "source_type": "public_web",
+    "source_url": "https://www.climatestotravel.com/climate/vietnam/da-nang",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_HUE_WX_001",
+    "source_id": "DOC_HUE_TRAVEL_2025",
+    "title": "Thời tiết Thừa Thiên Huế theo mùa",
+    "category": "SEASON_WEATHER",
+    "location": "Thừa Thiên Huế",
+    "content": "Huế có khí hậu nhiệt đới gió mùa với mùa mưa đến muộn và kéo dài hơn các địa phương lân cận. Theo Cổng thông tin du lịch quốc gia Vietnam.travel, mùa mưa ở Huế thường từ tháng 9 đến tháng 1/2 năm sau, với nguy cơ lũ trên sông Hương và ngập một số tuyến đường vào tháng 10–11 (một số năm ghi nhận đợt lũ lớn, ví dụ đợt lũ miền Trung tháng 10–11/2020 theo Wikipedia). Mùa khô từ tháng 2/3 đến tháng 8, có giai đoạn nắng nóng gay gắt tháng 6–7 do ảnh hưởng gió Lào (nhiệt độ có thể vượt 38–40°C). Giai đoạn được khuyến nghị cho tham quan là tháng 1–4, thời tiết mát, ít mưa, thuận lợi dạo Đại Nội, lăng tẩm và sông Hương. Vào mùa mưa lớn (tháng 10–11), một số điểm di tích có thể tạm ngừng đón khách vì lý do an toàn; du khách nên kiểm tra thông tin trước khi đi.",
+    "keywords": [
+      "thời tiết Huế",
+      "mùa mưa Huế",
+      "gió Lào",
+      "lũ sông Hương",
+      "Đại Nội thời tiết",
+      "khí hậu Huế"
+    ],
+    "source": "Vietnam.travel (Vietnam National Authority of Tourism); Wikipedia",
+    "last_updated": "2026-09-11",
+    "city_alias": [
+      "Huế"
+    ],
+    "source_type": "official",
+    "source_url": "https://www.vietnam.travel/things-to-do/weather-and-climate-vietnam",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_HA_WX_001",
+    "source_id": "DOC_HOIAN_TRAVEL_2025",
+    "title": "Thời tiết Hội An theo mùa",
+    "category": "SEASON_WEATHER",
+    "location": "Quảng Nam",
+    "content": "Hội An (Quảng Nam) nằm cùng dải khí hậu với Đà Nẵng, chia hai mùa: mùa khô khoảng tháng 2–8 và mùa mưa khoảng tháng 9–tháng 1 năm sau, theo Cổng thông tin Vietnam.travel. Tháng 10–11 là cao điểm mưa và có thể xảy ra ngập cục bộ ở khu phố cổ ven sông Hoài do ảnh hưởng bão/áp thấp nhiệt đới miền Trung. Giai đoạn tháng 2–5 thường được khuyến nghị vì ít mưa, dễ dạo phố cổ và rừng dừa Bảy Mẫu; tháng 6–8 nắng nóng nhưng vẫn là mùa cao điểm khách nội địa. Trong mùa mưa lớn, một số tuyến đường phố cổ có thể ngập nhẹ khi triều cường kết hợp mưa lớn; du khách nên cập nhật dự báo thời tiết trước khi tham quan.",
+    "keywords": [
+      "thời tiết Hội An",
+      "mùa mưa Hội An",
+      "phố cổ ngập nước",
+      "khí hậu Quảng Nam",
+      "mùa khô Hội An"
+    ],
+    "source": "Vietnam.travel (Vietnam National Authority of Tourism)",
+    "last_updated": "2026-09-11",
+    "city_alias": [
+      "Hội An"
+    ],
+    "source_type": "official",
+    "source_url": "https://www.vietnam.travel/things-to-do/weather-and-climate-vietnam",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_PQ_WX_001",
+    "source_id": "DOC_PHUQUOC_TRAVEL_2025",
+    "title": "Thời tiết Phú Quốc theo mùa",
+    "category": "SEASON_WEATHER",
+    "location": "Kiên Giang",
+    "content": "Khác với dải khí hậu miền Trung, Phú Quốc (Kiên Giang) chịu ảnh hưởng gió mùa Tây Nam nên có mùa mưa/khô lệch pha: theo VinWonders và nhiều nguồn tổng hợp (Pullman Danang... không, dùng Rootytrip/Chensea Resort), mùa khô kéo dài khoảng tháng 11 đến tháng 4 năm sau — biển êm, nắng đẹp, thích hợp tắm biển, lặn ngắm san hô ở Bãi Sao, Bãi Kem. Mùa mưa khoảng tháng 5–tháng 10, mưa thường đến nhanh vào buổi chiều rồi tạnh, cao điểm mưa tháng 7–9. Đảo ít chịu ảnh hưởng trực tiếp của bão lớn so với đất liền miền Trung nhưng biển động, gió mạnh có thể xảy ra tháng 8–9. Nhiệt độ trung bình quanh năm khá ổn định 27–30°C. Thời điểm được khuyến nghị nhiều nhất để du lịch Phú Quốc là tháng 11 đến tháng 4.",
+    "keywords": [
+      "thời tiết Phú Quốc",
+      "mùa mưa Phú Quốc",
+      "mùa khô Phú Quốc",
+      "đảo ngọc khí hậu",
+      "Bãi Sao Bãi Kem thời tiết"
+    ],
+    "source": "VinWonders Wonderpedia; Vinpearl Travel Guide",
+    "last_updated": "2026-09-11",
+    "city_alias": [
+      "Phú Quốc"
+    ],
+    "source_type": "public_web",
+    "source_url": "https://vinwonders.com/en/wonderpedia/news/phu-quoc-weather-full-seasonal-guide-for-island-hopping/",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_DL_WX_001",
+    "source_id": "DOC_DALAT_TRAVEL_2025",
+    "title": "Thời tiết Đà Lạt theo mùa",
+    "category": "SEASON_WEATHER",
+    "location": "Lâm Đồng",
+    "content": "Đà Lạt (Lâm Đồng) nằm ở cao nguyên khoảng 1.500m nên có khí hậu ôn đới mát mẻ quanh năm, nhiệt độ trung bình 18–21°C, hiếm khi vượt 30°C hay xuống dưới 5°C. Theo VinWonders và Climatestotravel, mùa khô kéo dài khoảng tháng 11–tháng 4 năm sau, trời trong, ít mưa, ban đêm se lạnh (có thể 10–15°C); mùa mưa khoảng tháng 5–tháng 10, mưa thường vào buổi chiều, cao điểm mưa tháng 6–9. Tháng 12 hằng năm thường trùng dịp Festival Hoa Đà Lạt (Lễ hội Hoa Đà Lạt), thời tiết khô ráo, se lạnh, rất thích hợp tham quan các vườn hoa. Giai đoạn được khuyến nghị nhiều nhất là tháng 11–tháng 3 (khô ráo) hoặc các tháng chuyển mùa (tháng 3–4, tháng 9–10) để cân bằng giữa thời tiết dễ chịu và lượng khách vừa phải.",
+    "keywords": [
+      "thời tiết Đà Lạt",
+      "mùa mưa Đà Lạt",
+      "mùa khô Đà Lạt",
+      "khí hậu cao nguyên",
+      "Festival Hoa Đà Lạt thời tiết"
+    ],
+    "source": "VinWonders Wonderpedia; Climatestotravel.com",
+    "last_updated": "2026-09-11",
+    "city_alias": [
+      "Đà Lạt"
+    ],
+    "source_type": "public_web",
+    "source_url": "https://vinwonders.com/en/wonderpedia/news/weather-in-da-lat/",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_DN_TRP_001",
+    "source_id": "DOC_DANANG_TRAVEL_2025",
+    "title": "Di chuyển từ sân bay Đà Nẵng vào trung tâm",
+    "category": "TRANSPORT_TIPS",
+    "location": "Đà Nẵng",
+    "content": "Sân bay quốc tế Đà Nẵng (DAD) tọa lạc trên đường Duy Tân, phường Hòa Thuận Tây, quận Hải Châu, chỉ cách trung tâm thành phố khoảng 3–5,5km — theo nhiều nguồn tổng hợp (Traveloka, Crystal Bay, Vietjet), thời gian di chuyển bằng taxi/xe công nghệ (Grab, Be) chỉ khoảng 7–20 phút tùy giờ cao điểm, giá taxi tham khảo khoảng 60.000–120.000đ/lượt về trung tâm. Sân bay cũng có các tuyến xe buýt công cộng giá rẻ (khoảng 10.000đ/lượt, ví dụ tuyến kết nối Đà Nẵng – Hội An) và các quầy taxi uy tín (Mai Linh, Taxi Airport...). Đây là một trong những sân bay có vị trí gần trung tâm nhất Việt Nam, thuận tiện cho lịch trình ngắn ngày.",
+    "keywords": [
+      "sân bay Đà Nẵng",
+      "di chuyển sân bay Đà Nẵng",
+      "taxi sân bay Đà Nẵng",
+      "DAD airport"
+    ],
+    "source": "Traveloka Travel Guide; Crystal Bay",
+    "last_updated": "2026-09-11",
+    "city_alias": [],
+    "source_type": "public_web",
+    "source_url": "https://www.traveloka.com/vi-vn/explore/tips/airport-di-chuyen-tu-san-bay-da-nang-ve-thanh-pho/519685",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_PQ_TRP_001",
+    "source_id": "DOC_PHUQUOC_TRAVEL_2025",
+    "title": "Di chuyển từ sân bay quốc tế Phú Quốc",
+    "category": "TRANSPORT_TIPS",
+    "location": "Kiên Giang",
+    "content": "Sân bay quốc tế Phú Quốc (PQC) nằm ở xã Dương Tơ, cách thị trấn Dương Đông khoảng 10–12km và cách khu Bãi Trường/Grand World khoảng 15–20 phút di chuyển bằng taxi hoặc xe công nghệ. Đây là sân bay quốc tế phục vụ các chuyến bay thẳng từ nhiều thành phố lớn trong nước và một số tuyến quốc tế. Du khách có thể di chuyển về trung tâm đảo bằng taxi, xe đưa đón khách sạn/resort đặt trước, hoặc xe buýt sân bay. Do khoảng cách giữa các khu vực trên đảo khá xa (Dương Đông, Bãi Trường, An Thới, Bãi Dài), nên xác định trước khu lưu trú để ước tính thời gian và chi phí di chuyển hợp lý.",
+    "keywords": [
+      "sân bay Phú Quốc",
+      "di chuyển sân bay Phú Quốc",
+      "PQC airport",
+      "taxi Phú Quốc"
+    ],
+    "source": "Tổng hợp thông tin du lịch công khai",
+    "last_updated": "2026-09-11",
+    "city_alias": [
+      "Phú Quốc"
+    ],
+    "source_type": "public_web",
+    "source_url": "https://vinwonders.com/en/wonderpedia/news/phu-quoc-weather-full-seasonal-guide-for-island-hopping/",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_HUE_TRP_001",
+    "source_id": "DOC_HUE_TRAVEL_2025",
+    "title": "Tàu hỏa di sản tuyến Huế - Đà Nẵng",
+    "category": "TRANSPORT_TIPS",
+    "location": "Thừa Thiên Huế",
+    "content": "Tuyến đường sắt Huế – Đà Nẵng đi qua đèo Hải Vân là một trong những cung đường tàu được đánh giá đẹp nhất Việt Nam, do Tổng công ty Đường sắt Việt Nam khai thác trên trục Bắc–Nam, chạy men theo bờ biển và sườn núi Hải Vân với nhiều điểm ngắm vịnh Lăng Cô. Thời gian di chuyển giữa hai ga trung tâm khoảng 2,5–3 giờ tùy loại tàu. Đây là lựa chọn phổ biến cho du khách muốn ngắm cảnh thay vì đi ô tô/xe khách qua hầm Hải Vân (nhanh hơn nhưng không có view biển). Nên đặt vé trước, đặc biệt vào mùa cao điểm hè và các dịp lễ, và ưu tiên chọn toa/giờ chạy ban ngày để tận dụng cảnh quan.",
+    "keywords": [
+      "tàu hỏa Huế Đà Nẵng",
+      "đèo Hải Vân",
+      "đường sắt Việt Nam",
+      "tàu ngắm cảnh miền Trung"
+    ],
+    "source": "Tổng công ty Đường sắt Việt Nam (thông tin công khai tổng hợp)",
+    "last_updated": "2026-09-11",
+    "city_alias": [
+      "Huế"
+    ],
+    "source_type": "public_web",
+    "source_url": "https://dsvn.vn/",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_HA_TRP_001",
+    "source_id": "DOC_HOIAN_TRAVEL_2025",
+    "title": "Di chuyển bằng xe buýt và xe máy tại Hội An",
+    "category": "TRANSPORT_TIPS",
+    "location": "Quảng Nam",
+    "content": "Khu phố cổ Hội An là khu vực đi bộ/hạn chế xe cơ giới trong một số khung giờ (đặc biệt buổi tối), nên phương tiện phổ biến để tham quan là đi bộ, xe đạp hoặc xích lô. Ngoài phố cổ, xe máy và taxi/xe công nghệ là phương tiện chính để di chuyển tới các điểm lân cận như rừng dừa Bảy Mẫu Cẩm Thanh, biển An Bàng, Cửa Đại. Nhiều khách sạn/homestay có dịch vụ cho thuê xe đạp miễn phí hoặc giá rẻ. Khoảng cách từ Hội An tới Đà Nẵng khoảng 30km, thường đi bằng taxi, xe buýt công cộng tuyến Đà Nẵng – Hội An, hoặc xe ghép/xe riêng.",
+    "keywords": [
+      "di chuyển Hội An",
+      "xe đạp phố cổ",
+      "xích lô Hội An",
+      "xe buýt Đà Nẵng Hội An"
+    ],
+    "source": "Tổng hợp thông tin du lịch công khai",
+    "last_updated": "2026-09-11",
+    "city_alias": [
+      "Hội An"
+    ],
+    "source_type": "public_web",
+    "source_url": "https://quangnamtourism.com.vn/gia-ve-pho-co-hoi-an/",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_DL_TRP_001",
+    "source_id": "DOC_DALAT_TRAVEL_2025",
+    "title": "Kinh nghiệm di chuyển tại Đà Lạt",
+    "category": "TRANSPORT_TIPS",
+    "location": "Lâm Đồng",
+    "content": "Đà Lạt có địa hình đồi dốc nên xe máy là phương tiện phổ biến nhất để tự do khám phá thành phố và các điểm ngoại ô (Hồ Tuyền Lâm, đồi chè Cầu Đất...). Taxi và xe công nghệ hoạt động phổ biến ở khu trung tâm quanh Hồ Xuân Hương và chợ Đà Lạt. Sân bay Liên Khương cách trung tâm thành phố khoảng 30km về phía nam, di chuyển bằng taxi hoặc xe đưa đón mất khoảng 40–45 phút. Vì đường đèo dốc quanh co, du khách chưa quen địa hình cao nguyên nên cân nhắc thuê xe có tài xế thay vì tự lái xe máy vào ban đêm hoặc khi trời mưa.",
+    "keywords": [
+      "di chuyển Đà Lạt",
+      "sân bay Liên Khương",
+      "xe máy Đà Lạt",
+      "taxi Đà Lạt"
+    ],
+    "source": "Tổng hợp thông tin du lịch công khai",
+    "last_updated": "2026-09-11",
+    "city_alias": [
+      "Đà Lạt"
+    ],
+    "source_type": "public_web",
+    "source_url": "https://vinwonders.com/en/wonderpedia/news/weather-in-da-lat/",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_DN_FOOD_001",
+    "source_id": "DOC_DANANG_TRAVEL_2025",
+    "title": "Ẩm thực Đà Nẵng: Mì Quảng và các món phải thử",
+    "category": "LOCAL_CUISINE",
+    "location": "Đà Nẵng",
+    "content": "Mì Quảng là món mì đặc trưng có nguồn gốc từ tỉnh Quảng Nam và Đà Nẵng, theo Wikipedia được xem là một trong những món ăn tiêu biểu và phổ biến nhất của miền Trung, thường xuất hiện trong các dịp gia đình, giỗ chạp, Tết. Thành phần gồm sợi mì gạo, nước dùng ít hơn phở/bún (chỉ xâm xấp), cùng các loại nhân đa dạng như tôm, thịt, cá lóc, gà, ếch, ăn kèm bánh tráng nướng và rau sống. Thương hiệu Mì Quảng Bà Mua (thành lập khoảng năm 1997, nhiều cơ sở tại Đà Nẵng) là một trong những địa chỉ được nhắc đến nhiều nhất theo các bài viết trên Cổng thông tin du lịch Đà Nẵng (visitdanang.travel) và Vietnam Airlines Travel Guide.",
+    "keywords": [
+      "Mì Quảng",
+      "ẩm thực Đà Nẵng",
+      "đặc sản Quảng Nam Đà Nẵng",
+      "Mì Quảng Bà Mua"
+    ],
+    "source": "Wikipedia; Cổng thông tin du lịch Đà Nẵng (visitdanang.travel)",
+    "last_updated": "2026-09-11",
+    "city_alias": [],
+    "source_type": "public_web",
+    "source_url": "https://en.wikipedia.org/wiki/Mi_quang",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_HUE_FOOD_001",
+    "source_id": "DOC_HUE_TRAVEL_2025",
+    "title": "Ẩm thực Huế: Bún bò Huế và cơm hến",
+    "category": "LOCAL_CUISINE",
+    "location": "Thừa Thiên Huế",
+    "content": "Bún bò Huế là món súp bún đặc sản của Huế, theo Wikipedia gắn liền với phong cách ẩm thực cung đình triều Nguyễn, đặc trưng bởi nước dùng cay nồng nấu từ xương bò/heo, sả, mắm ruốc, ăn kèm giò heo, chả cua/huyết, rau sống. Đây được xem là món ăn sáng phổ biến bậc nhất tại Huế và đã lan rộng khắp cả nước với nhiều biến thể vùng miền (Huế, Bắc, Nam). Cơm hến — món cơm trộn nghêu/hến nhỏ đặc trưng của vùng Cồn Hến, sông Hương — cũng là một món ăn bình dân nổi tiếng khác của Huế, thường được giới thiệu cùng bún bò Huế trong các cẩm nang ẩm thực (Vietnam.travel).",
+    "keywords": [
+      "Bún bò Huế",
+      "cơm hến",
+      "ẩm thực Huế",
+      "đặc sản cố đô"
+    ],
+    "source": "Wikipedia; Vietnam.travel",
+    "last_updated": "2026-09-11",
+    "city_alias": [
+      "Huế"
+    ],
+    "source_type": "public_web",
+    "source_url": "https://en.wikipedia.org/wiki/B%C3%BAn_b%C3%B2_Hu%E1%BA%BF",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_HA_FOOD_001",
+    "source_id": "DOC_HOIAN_TRAVEL_2025",
+    "title": "Ẩm thực Hội An: Cao Lầu và món ăn phố cổ",
+    "category": "LOCAL_CUISINE",
+    "location": "Quảng Nam",
+    "content": "Cao lầu là món mì đặc sản chỉ có ở Hội An, theo Wikipedia được xem là sự giao thoa ẩm thực Việt–Hoa–Nhật gắn với lịch sử thương cảng Hội An, đặc trưng bởi sợi mì dày làm từ gạo ngâm nước tro (tạo màu và độ dai đặc trưng), ăn cùng thịt xá xíu, rau sống, bánh tráng/da heo chiên giòn. Cao lầu chính hiệu tương truyền được làm từ nước giếng cổ Bá Lễ tại Hội An. Cùng với mì Quảng, cao lầu là một trong hai món “trứ danh” thường được giới thiệu khi nói về ẩm thực phố cổ Hội An (theo Vietnam.travel).",
+    "keywords": [
+      "Cao lầu",
+      "đặc sản Hội An",
+      "mì Hội An",
+      "ẩm thực phố cổ"
+    ],
+    "source": "Wikipedia; Vietnam.travel",
+    "last_updated": "2026-09-11",
+    "city_alias": [
+      "Hội An"
+    ],
+    "source_type": "public_web",
+    "source_url": "https://en.wikipedia.org/wiki/Cao_l%E1%BA%A7u",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_PQ_FOOD_001",
+    "source_id": "DOC_PHUQUOC_TRAVEL_2025",
+    "title": "Ẩm thực Phú Quốc: Bún Quậy và hải sản",
+    "category": "LOCAL_CUISINE",
+    "location": "Kiên Giang",
+    "content": "Bún quậy là món đặc sản của Phú Quốc, có nguồn gốc từ món bún tôm Bình Định do ngư dân miền Trung mang vào đảo rồi biến tấu với hải sản địa phương (tôm, mực, chả cá). Tên gọi \"quậy\" xuất phát từ cách pha nước chấm: thực khách tự cho bột canh, đường, quất, ớt xay, mì chính vào chén rồi tự tay quậy đều cho tới khi sánh và chuyển màu cam đỏ. Món ăn thường dùng cho bữa sáng, các quán nổi tiếng được nhắc tới nhiều gồm Bún quậy Kiến Xây và Bún quậy Thanh Hùng tại thị trấn Dương Đông (theo VinWonders, Vinpearl Travel Guide).",
+    "keywords": [
+      "Bún quậy Phú Quốc",
+      "đặc sản đảo ngọc",
+      "bún tươi hải sản",
+      "Kiến Xây"
+    ],
+    "source": "VinWonders Wonderpedia; Vinpearl Travel Guide",
+    "last_updated": "2026-09-11",
+    "city_alias": [
+      "Phú Quốc"
+    ],
+    "source_type": "public_web",
+    "source_url": "https://vinwonders.com/vi/wonderpedia/news/bun-quay-phu-quoc-review-quan-an-ngon-cach-an-chuan-dan-ban-dia/",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_DL_FOOD_001",
+    "source_id": "DOC_DALAT_TRAVEL_2025",
+    "title": "Ẩm thực Đà Lạt: Lẩu gà lá é và đồ nướng",
+    "category": "LOCAL_CUISINE",
+    "location": "Lâm Đồng",
+    "content": "Lẩu gà lá é là món lẩu đặc trưng của Đà Lạt, dùng lá é (một loại rau thơm vùng cao nguyên, vị hơi cay nồng đặc trưng) nấu cùng gà ta và nước dùng chua nhẹ, thường ăn kèm măng, nấm. Đồ nướng (BBQ) — thịt nướng, nấm nướng, bắp nướng — cũng rất phổ biến vào buổi tối se lạnh, thường bán quanh khu chợ đêm và Hồ Xuân Hương. Đây là hai nhóm món ăn gắn liền với đặc trưng khí hậu se lạnh của Đà Lạt, được nhiều cẩm nang ẩm thực địa phương giới thiệu.",
+    "keywords": [
+      "Lẩu gà lá é",
+      "đồ nướng Đà Lạt",
+      "ẩm thực cao nguyên",
+      "chợ đêm Đà Lạt"
+    ],
+    "source": "Tổng hợp cẩm nang ẩm thực du lịch công khai",
+    "last_updated": "2026-09-11",
+    "city_alias": [
+      "Đà Lạt"
+    ],
+    "source_type": "public_web",
+    "source_url": "https://vinwonders.com/vi/wonderpedia/news/vuon-hoa-thanh-pho-da-lat/",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_HUE_CUL_001",
+    "source_id": "DOC_HUE_TRAVEL_2025",
+    "title": "Quy định trang phục khi tham quan lăng tẩm và Đại Nội Huế",
+    "category": "CULTURE_ETIQUETTE",
+    "location": "Thừa Thiên Huế",
+    "content": "Khi tham quan Đại Nội và các lăng tẩm triều Nguyễn (di sản UNESCO), Trung tâm Bảo tồn Di tích Cố đô Huế khuyến nghị du khách ăn mặc lịch sự, kín đáo (tránh trang phục quá ngắn/hở), đi giày dép phù hợp để di chuyển trên nền gạch cổ và bậc thang, đồng thời giữ trật tự, không chạm/leo trèo lên hiện vật và kiến trúc cổ. Một số khu vực trong lăng tẩm (ví dụ Cung Thiên Định tại lăng Khải Định) hạn chế người ra vào cùng lúc để bảo tồn hiện vật sơn son thếp vàng, khảm sành sứ.",
+    "keywords": [
+      "trang phục tham quan Đại Nội",
+      "quy định lăng tẩm Huế",
+      "di sản UNESCO Huế",
+      "văn hóa ứng xử di tích"
+    ],
+    "source": "Trung tâm Bảo tồn Di tích Cố đô Huế (thông tin công khai tổng hợp)",
+    "last_updated": "2026-09-11",
+    "city_alias": [
+      "Huế"
+    ],
+    "source_type": "public_web",
+    "source_url": "https://vietnamtourism.gov.vn/post/9463",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_TOAN_CUL_001",
+    "source_id": "DOC_VIETNAM_TRAVEL_2025",
+    "title": "Văn hóa trang phục khi viếng chùa chiền tại miền Trung",
+    "category": "CULTURE_ETIQUETTE",
+    "location": "Toàn quốc",
+    "content": "Khi viếng chùa, đền, miếu tại Việt Nam nói chung và miền Trung nói riêng, du khách nên mặc trang phục kín đáo, lịch sự (tránh quần/váy ngắn, áo hở vai), nói chuyện nhỏ nhẹ, không quay lưng vào tượng Phật khi chụp ảnh, tháo mũ nón khi vào chính điện, và nên xin phép trước khi quay phim/chụp ảnh trong khu vực thờ tự. Một số chùa lớn (như Chùa Thiên Mụ ở Huế) có thể có quy định riêng về giờ mở cửa và khu vực hạn chế khách tham quan.",
+    "keywords": [
+      "văn hóa viếng chùa",
+      "trang phục đi chùa",
+      "quy tắc ứng xử tâm linh",
+      "chùa miền Trung"
+    ],
+    "source": "Tổng hợp thông tin văn hóa du lịch công khai",
+    "last_updated": "2026-09-11",
+    "city_alias": [],
+    "source_type": "public_web",
+    "source_url": "https://vi.wikipedia.org/wiki/Ch%C3%B9a_Thi%C3%AAn_M%E1%BB%A5",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_TOAN_CUL_002",
+    "source_id": "DOC_VIETNAM_TRAVEL_2025",
+    "title": "Văn hóa tiền tip khi đi du lịch miền Trung",
+    "category": "CULTURE_ETIQUETTE",
+    "location": "Toàn quốc",
+    "content": "Văn hóa tiền tip (tip) tại Việt Nam không bắt buộc như ở phương Tây, nhưng đang trở nên phổ biến hơn trong ngành du lịch, đặc biệt với hướng dẫn viên, tài xế riêng, nhân viên khuân vác hành lý tại khách sạn/sân bay và nhân viên massage/spa. Mức tip tham khảo thường dao động một khoản nhỏ tùy thiện chí (không có mức cố định bắt buộc theo luật), nhiều nhà hàng/khách sạn đã tính sẵn phí phục vụ (thường 5–10%) trong hóa đơn nên không bắt buộc tip thêm. Du khách nên chủ động hỏi trước nếu không chắc hóa đơn đã bao gồm phí phục vụ hay chưa.",
+    "keywords": [
+      "tiền tip du lịch Việt Nam",
+      "văn hóa boa",
+      "phí phục vụ nhà hàng",
+      "tip hướng dẫn viên"
+    ],
+    "source": "Tổng hợp thông tin văn hóa du lịch công khai",
+    "last_updated": "2026-09-11",
+    "city_alias": [],
+    "source_type": "public_web",
+    "source_url": "https://www.vietnam.travel/things-to-do/weather-and-climate-vietnam",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_TOAN_CUL_003",
+    "source_id": "DOC_VIETNAM_TRAVEL_2025",
+    "title": "Kinh nghiệm mua sắm và trả giá tại chợ đêm",
+    "category": "CULTURE_ETIQUETTE",
+    "location": "Toàn quốc",
+    "content": "Tại các chợ đêm, chợ truyền thống ở miền Trung (chợ đêm Hội An, chợ đêm Đà Lạt, chợ Đông Ba Huế...), việc trả giá khi mua đồ lưu niệm, quần áo là tập quán phổ biến vì nhiều mặt hàng không niêm yết giá cố định; mức trả giá tham khảo thường bắt đầu thấp hơn giá chào 20–40% rồi thương lượng dần. Với hàng ăn uống, giá thường đã niêm yết hoặc tương đối cố định nên ít khi trả giá. Nên hỏi giá trước khi mua/ăn để tránh hiểu lầm, và ưu tiên các quầy/quán có bảng giá rõ ràng.",
+    "keywords": [
+      "trả giá chợ đêm",
+      "chợ Đông Ba",
+      "chợ đêm Hội An",
+      "kinh nghiệm mua sắm miền Trung"
+    ],
+    "source": "Tổng hợp thông tin văn hóa du lịch công khai",
+    "last_updated": "2026-09-11",
+    "city_alias": [],
+    "source_type": "public_web",
+    "source_url": "https://quangnamtourism.com.vn/gia-ve-pho-co-hoi-an/",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_TOAN_SAFE_001",
+    "source_id": "DOC_VIETNAM_TRAVEL_2025",
+    "title": "Số điện thoại hỗ trợ du khách toàn quốc",
+    "category": "SAFETY_REGULATION",
+    "location": "Toàn quốc",
+    "content": "Các số điện thoại khẩn cấp áp dụng toàn quốc tại Việt Nam gồm: 113 (Công an/Cảnh sát – an ninh trật tự), 114 (Cứu hỏa – cứu nạn cứu hộ), 115 (Cấp cứu y tế), 112 (Tìm kiếm cứu nạn nói chung, thiên tai/bão lũ), 111 (Tổng đài quốc gia bảo vệ trẻ em). Các số này gọi được miễn phí từ điện thoại cố định lẫn di động trên toàn quốc, không cần bấm mã vùng khi gọi cùng tỉnh/thành. Du khách nước ngoài cũng có thể liên hệ đường dây nóng hỗ trợ du lịch (do Sở Du lịch từng địa phương công bố) để được hỗ trợ về thủ tục, khiếu nại dịch vụ du lịch.",
+    "keywords": [
+      "số điện thoại khẩn cấp Việt Nam",
+      "113 114 115",
+      "đường dây nóng du lịch",
+      "cấp cứu Việt Nam"
+    ],
+    "source": "Tổng hợp quy định số điện thoại khẩn cấp công khai",
+    "last_updated": "2026-09-11",
+    "city_alias": [],
+    "source_type": "public_web",
+    "source_url": "https://thuvienphapluat.vn/phap-luat/ho-tro-phap-luat/tich-hop-tong-dai-113-dung-chung-cho-cap-cuu-an-ninh-cuu-ho-chi-tiet-ra-sao-cac-so-dien-thoai-khan--642390-264649.html",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_DN_SAFE_001",
+    "source_id": "DOC_DANANG_TRAVEL_2025",
+    "title": "Lưu ý an toàn khi tắm biển Mỹ Khê",
+    "category": "SAFETY_REGULATION",
+    "location": "Đà Nẵng",
+    "content": "Biển Mỹ Khê (Đà Nẵng) từng được một số tạp chí quốc tế bình chọn là một trong những bãi biển hấp dẫn, tuy nhiên vẫn có dòng chảy xa bờ (rip current) tiềm ẩn ở một số thời điểm, đặc biệt mùa mưa bão (tháng 9–12) khi sóng lớn. Du khách nên tắm biển trong khu vực có cắm cờ/biển báo an toàn, có đội cứu hộ trực, tránh bơi ra xa khu vực được phép, không tắm biển khi có cảnh báo sóng lớn hoặc ngoài giờ cứu hộ hoạt động (thường sáng sớm và chiều tối). Trẻ em và người không biết bơi nên có người lớn giám sát liên tục.",
+    "keywords": [
+      "an toàn tắm biển Mỹ Khê",
+      "dòng chảy xa bờ",
+      "cứu hộ bãi biển Đà Nẵng",
+      "biển Mỹ Khê"
+    ],
+    "source": "Tổng hợp khuyến cáo an toàn du lịch công khai",
+    "last_updated": "2026-09-11",
+    "city_alias": [],
+    "source_type": "public_web",
+    "source_url": "https://www.traveloka.com/vi-vn/hotel/vietnam/landmark/my-khe-beach-6187624",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_PQ_SAFE_001",
+    "source_id": "DOC_PHUQUOC_TRAVEL_2025",
+    "title": "Lưu ý an toàn khi tắm biển và lặn biển tại Phú Quốc",
+    "category": "SAFETY_REGULATION",
+    "location": "Kiên Giang",
+    "content": "Khi tắm biển hoặc lặn ngắm san hô tại Phú Quốc (Bãi Sao, Bãi Kem, khu vực Nam đảo), du khách nên chọn dịch vụ lặn/snorkeling có hướng dẫn viên và trang thiết bị đạt chuẩn, tránh tự ý lặn xa ở vùng nước sâu không quen thuộc, đặc biệt vào mùa mưa (tháng 5–10) khi biển động, sóng lớn hơn. Không chạm/bẻ san hô để bảo vệ hệ sinh thái biển. Nên mua bảo hiểm du lịch có hạng mục thể thao dưới nước nếu tham gia lặn biển, ca-nô, mô-tô nước.",
+    "keywords": [
+      "an toàn lặn biển Phú Quốc",
+      "Bãi Sao Bãi Kem",
+      "bảo vệ san hô",
+      "du lịch biển an toàn"
+    ],
+    "source": "Tổng hợp khuyến cáo an toàn du lịch công khai",
+    "last_updated": "2026-09-11",
+    "city_alias": [
+      "Phú Quốc"
+    ],
+    "source_type": "public_web",
+    "source_url": "https://vinwonders.com/en/wonderpedia/news/phu-quoc-weather-full-seasonal-guide-for-island-hopping/",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_HUE_INFO_001",
+    "source_id": "DOC_HUE_TRAVEL_2025",
+    "title": "Giá vé tham quan Đại Nội Huế và các lăng tẩm 2025",
+    "category": "DESTINATION_INFO",
+    "location": "Thừa Thiên Huế",
+    "content": "Theo thông báo của Trung tâm Bảo tồn Di tích Cố đô Huế (cập nhật trên Cổng Du lịch Quốc gia vietnamtourism.gov.vn), từ 16/4 giá vé các điểm Đại Nội, lăng Tự Đức, lăng Khải Định, lăng Minh Mạng đã điều chỉnh: khách quốc tế tăng từ 55.000 lên 80.000đ, khách Việt Nam tăng từ 35.000 lên 50.000đ (trẻ em 10.000–20.000đ). Tuy nhiên các nguồn cập nhật năm 2026 (Sovaba Travel, Homestay Huế) cho biết mức vé Đại Nội hiện áp dụng thống nhất khoảng 200.000đ/người lớn (đã gồm Bảo tàng Cổ vật Cung đình và Điện Kiến Trung); vé combo 4 điểm (Đại Nội + 3 lăng Minh Mạng/Tự Đức/Khải Định) khoảng 530.000đ/người lớn. Vì mức vé có thể điều chỉnh theo từng giai đoạn/nghị quyết địa phương, du khách nên kiểm tra giá mới nhất qua hệ thống eticket chính thức của Trung tâm Bảo tồn Di tích Cố đô Huế trước khi mua.",
+    "keywords": [
+      "giá vé Đại Nội Huế",
+      "giá vé lăng tẩm Huế",
+      "Trung tâm Bảo tồn Di tích Cố đô Huế",
+      "vé combo di tích Huế"
+    ],
+    "source": "Cổng Du lịch Quốc gia Việt Nam (vietnamtourism.gov.vn); Sovaba Travel",
+    "last_updated": "2026-09-11",
+    "city_alias": [
+      "Huế"
+    ],
+    "source_type": "official",
+    "source_url": "https://vietnamtourism.gov.vn/post/9463",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_DN_INFO_001",
+    "source_id": "DOC_DANANG_TRAVEL_2025",
+    "title": "Giá vé cáp treo Bà Nà Hills 2025",
+    "category": "DESTINATION_INFO",
+    "location": "Đà Nẵng",
+    "content": "Theo trang chính thức Sun World Ba Na Hills (sunworld.vn), giá vé cáp treo khứ hồi (đã gồm quyền tham quan Cầu Vàng, Vườn hoa Le Jardin d'Amour, Lâu đài Mặt Trăng, phần lớn trò chơi Fantasy Park, show nghệ thuật) năm 2026 khởi điểm khoảng 500.000–750.000đ/người lớn tùy đối tượng (khách Đà Nẵng/ngoại tỉnh), vé combo cáp treo + buffet cao nhất khoảng 1.250.000đ. Vé vào cổng có giá trị sử dụng trong 3 ngày liên tiếp kể từ ngày đầu tiên. Một số dịch vụ như máng trượt Alpine Coaster đã thu phí riêng từ 2026 (70.000–100.000đ/lượt tùy khung giờ). Giá vé/khuyến mãi có thể thay đổi theo mùa, nên tham khảo bảng giá mới nhất trên sunworld.vn trước khi đi.",
+    "keywords": [
+      "giá vé Bà Nà Hills",
+      "Sun World Ba Na Hills 2026",
+      "vé cáp treo Đà Nẵng",
+      "Cầu Vàng vé vào cổng"
+    ],
+    "source": "Sun World Ba Na Hills (trang chính thức)",
+    "last_updated": "2026-09-11",
+    "city_alias": [],
+    "source_type": "official",
+    "source_url": "https://sunworld.vn/vi/banahills/cam-nang-du-lich/bang-gia-ve-va-dich-vu-tai-sun-world-ba-na-hills-nam-2026-19796",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_PQ_INFO_001",
+    "source_id": "DOC_PHUQUOC_TRAVEL_2025",
+    "title": "Giá vé VinWonders Phú Quốc 2025",
+    "category": "DESTINATION_INFO",
+    "location": "Kiên Giang",
+    "content": "Theo trang chính thức VinWonders (vinwonders.com) và Vinpearl, giá vé vào cổng VinWonders Phú Quốc năm 2026 tham khảo khoảng 900.000–950.000đ/người lớn (trẻ em khoảng 700.000–710.000đ, miễn phí dưới 1m), đã bao gồm quyền vui chơi tại 6 phân khu chủ đề và các show diễn trong ngày; một số dịch vụ như Fastpass, thuê tủ locker/khăn tắm/xe đạp tính phí riêng. Vé combo với Vinpearl Safari hoặc Grand World thường có mức ưu đãi hơn khi mua theo combo nhiều điểm/nhiều ngày. Giá vé có thể thay đổi theo chương trình khuyến mãi từng thời điểm, nên kiểm tra bảng giá mới nhất trên website chính thức VinWonders trước khi mua.",
+    "keywords": [
+      "giá vé VinWonders Phú Quốc",
+      "công viên giải trí Phú Quốc",
+      "Vinpearl Safari combo",
+      "vé Phú Quốc United Center"
+    ],
+    "source": "VinWonders (trang chính thức)",
+    "last_updated": "2026-09-11",
+    "city_alias": [
+      "Phú Quốc"
+    ],
+    "source_type": "official",
+    "source_url": "https://vinwonders.com/vi/wonderpedia/news/gia-ve-vinwonders-phu-quoc-combo-voucher-hot/",
+    "data_version": "kb_v1.3_2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng."
+  },
+  {
+    "kb_id": "KB_HA_INFO_001",
+    "source_id": "DOC_HOIAN_TRAVEL_2026",
+    "title": "Giá vé tham quan Phố cổ Hội An",
+    "category": "DESTINATION_INFO",
+    "location": "Quảng Nam",
+    "city_alias": [
+      "Hội An"
+    ],
+    "content": "Theo Quảng Nam Tourism (cổng thông tin du lịch chính thức của tỉnh Quảng Nam), vé tham quan Phố cổ Hội An hiện áp dụng khoảng 80.000đ/người đối với khách Việt Nam và 120.000đ/người đối với khách quốc tế; trẻ em dưới 1m được miễn phí, từ 1m–1m4 khoảng 50.000đ. Một vé cho phép chọn tham quan một số điểm (thường 5 trong khoảng 20+ di tích được đưa vào danh sách vé) như Chùa Cầu, các nhà cổ, hội quán người Hoa, bảo tàng nhỏ trong khu phố cổ; vé có giá trị sử dụng trong 24 giờ nhưng phải tuân theo giờ mở cửa từng điểm. Toàn bộ nguồn thu vé được dùng để trùng tu, bảo tồn di sản UNESCO. Giá vé có thể điều chỉnh theo từng thời kỳ nên nên kiểm tra thông tin cập nhật tại các quầy vé chính thức.",
+    "keywords": [
+      "giá vé Phố cổ Hội An",
+      "vé tham quan di sản UNESCO",
+      "Chùa Cầu vé vào cổng",
+      "Quảng Nam Tourism"
+    ],
+    "source": "Quảng Nam Tourism (cổng thông tin du lịch chính thức tỉnh Quảng Nam)",
+    "source_type": "official",
+    "source_url": "https://quangnamtourism.com.vn/gia-ve-pho-co-hoi-an/",
+    "last_updated": "2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng.",
+    "data_version": "kb_v1.3_2026-09-11"
+  },
+  {
+    "kb_id": "KB_DL_INFO_001",
+    "source_id": "DOC_DALAT_TRAVEL_2026",
+    "title": "Giá vé tham quan Vườn Hoa Thành Phố Đà Lạt",
+    "category": "DESTINATION_INFO",
+    "location": "Lâm Đồng",
+    "city_alias": [
+      "Đà Lạt"
+    ],
+    "content": "Theo các nguồn tổng hợp giá vé du lịch Đà Lạt 2026 (VinWonders Wonderpedia, các đại lý tour địa phương), vé tham quan Vườn hoa Thành phố Đà Lạt tham khảo khoảng 50.000–100.000đ/người lớn (mức chênh lệch giữa các nguồn do các đợt điều chỉnh giá khác nhau trong năm), trẻ em khoảng 20.000–50.000đ hoặc miễn phí dưới 5 tuổi tùy quy định từng thời điểm; vé chỉ có giá trị một chiều (ra rồi vào lại phải mua vé mới). Đây cũng là địa điểm chính tổ chức Festival Hoa Đà Lạt, thường diễn ra vào tháng 12 hai năm một lần. Do giá vé được ghi nhận không đồng nhất giữa các nguồn, du khách nên xác nhận giá mới nhất tại quầy vé hoặc kênh chính thức của thành phố trước khi tham quan.",
+    "keywords": [
+      "giá vé Vườn hoa Đà Lạt",
+      "Festival Hoa Đà Lạt",
+      "Công viên hoa thành phố",
+      "vé tham quan Đà Lạt"
+    ],
+    "source": "VinWonders Wonderpedia; tổng hợp đại lý tour địa phương",
+    "source_type": "public_web",
+    "source_url": "https://vinwonders.com/vi/wonderpedia/news/vuon-hoa-thanh-pho-da-lat/",
+    "last_updated": "2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng.",
+    "data_version": "kb_v1.3_2026-09-11"
+  },
+  {
+    "kb_id": "KB_TOAN_INFO_001",
+    "source_id": "DOC_MIENTRUNG_SEASON_2026",
+    "title": "Mùa cao điểm và mùa lễ hội du lịch miền Trung",
+    "category": "DESTINATION_INFO",
+    "location": "Toàn quốc",
+    "city_alias": [],
+    "content": "Mùa cao điểm du lịch miền Trung Việt Nam thường rơi vào hè (tháng 6–8, đông khách nội địa nghỉ hè) và các dịp lễ Tết Dương lịch, Tết Nguyên đán, 30/4–1/5, Quốc khánh 2/9 — giá phòng/dịch vụ thường tăng và cần đặt trước. Mùa thấp điểm thường trùng mùa mưa bão miền Trung (tháng 9–12 với Đà Nẵng/Huế/Hội An), giá dịch vụ rẻ hơn nhưng rủi ro thời tiết cao hơn. Một số lễ hội lớn đáng chú ý: Lễ hội pháo hoa quốc tế Đà Nẵng (DIFF, thường vào mùa hè), Festival Huế (năm chẵn) và các dịp lễ hội văn hóa tại Hội An, Festival Hoa Đà Lạt (tháng 12). Phú Quốc ít chịu ảnh hưởng mùa mưa bão miền Trung hơn nên có thể là lựa chọn thay thế vào tháng 9–12.",
+    "keywords": [
+      "mùa cao điểm du lịch miền Trung",
+      "lễ hội miền Trung",
+      "Festival Huế",
+      "DIFF pháo hoa Đà Nẵng"
+    ],
+    "source": "Tổng hợp thông tin du lịch công khai",
+    "source_type": "public_web",
+    "source_url": "https://www.vietnam.travel/things-to-do/weather-and-climate-vietnam",
+    "last_updated": "2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng.",
+    "data_version": "kb_v1.3_2026-09-11"
+  },
+  {
+    "kb_id": "KB_DL_SAFE_001",
+    "source_id": "DOC_DALAT_SAFETY_2026",
+    "title": "An toàn khi tham gia hoạt động mạo hiểm tại Đà Lạt",
+    "category": "SAFETY_REGULATION",
+    "location": "Lâm Đồng",
+    "city_alias": [
+      "Đà Lạt"
+    ],
+    "content": "Các hoạt động mạo hiểm tại Đà Lạt (dù lượn, đu dây vượt thác canyoning tại thác Datanla/Pongour, leo núi Lang Biang...) nên được thực hiện qua các đơn vị lữ hành/câu lạc bộ có giấy phép hoạt động và trang thiết bị bảo hộ đạt chuẩn, có hướng dẫn viên chuyên nghiệp đi kèm. Du khách nên kiểm tra tình trạng sức khỏe cá nhân trước khi tham gia, tránh chơi vào ngày mưa lớn (nguy cơ trơn trượt, lũ suối dâng nhanh ở khu vực thác), và luôn mặc áo phao/trang bị bảo hộ khi tham gia canyoning hoặc chèo thuyền trên hồ.",
+    "keywords": [
+      "an toàn du lịch mạo hiểm Đà Lạt",
+      "canyoning Đà Lạt",
+      "thác Datanla an toàn",
+      "dù lượn Đà Lạt"
+    ],
+    "source": "Tổng hợp khuyến cáo an toàn du lịch công khai",
+    "source_type": "public_web",
+    "source_url": "https://vinwonders.com/en/wonderpedia/news/weather-in-da-lat/",
+    "last_updated": "2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng.",
+    "data_version": "kb_v1.3_2026-09-11"
+  },
+  {
+    "kb_id": "KB_HA_SAFE_001",
+    "source_id": "DOC_HOIAN_SAFETY_2026",
+    "title": "An toàn giao thông và đi lại trong Phố cổ Hội An",
+    "category": "SAFETY_REGULATION",
+    "location": "Quảng Nam",
+    "city_alias": [
+      "Hội An"
+    ],
+    "content": "Khu phố cổ Hội An hạn chế/cấm một số phương tiện cơ giới vào khung giờ nhất định (đặc biệt buổi tối) để đảm bảo an toàn cho người đi bộ tham quan; du khách nên tuân thủ biển báo, đi đúng phần đường dành cho người đi bộ và xe đạp/xích lô trong khu vực này. Khi thuê xe máy/xe đạp di chuyển ra ngoài phố cổ (đến An Bàng, Cẩm Thanh), nên đội mũ bảo hiểm, kiểm tra tình trạng xe trước khi thuê, và cẩn trọng vào mùa mưa (tháng 10–11) khi một số tuyến đường có thể ngập nước.",
+    "keywords": [
+      "an toàn giao thông Hội An",
+      "phố đi bộ Hội An",
+      "thuê xe máy an toàn",
+      "mùa mưa Hội An"
+    ],
+    "source": "Tổng hợp khuyến cáo an toàn du lịch công khai",
+    "source_type": "public_web",
+    "source_url": "https://quangnamtourism.com.vn/gia-ve-pho-co-hoi-an/",
+    "last_updated": "2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng.",
+    "data_version": "kb_v1.3_2026-09-11"
+  },
+  {
+    "kb_id": "KB_PQ_CUL_001",
+    "source_id": "DOC_PHUQUOC_CULTURE_2026",
+    "title": "Văn hóa và lễ hội đặc trưng tại Phú Quốc",
+    "category": "CULTURE_ETIQUETTE",
+    "location": "Kiên Giang",
+    "city_alias": [
+      "Phú Quốc"
+    ],
+    "content": "Phú Quốc (thuộc tỉnh Kiên Giang) có đời sống văn hóa gắn với ngư nghiệp và tín ngưỡng thờ cá Ông (cá voi) của cộng đồng ngư dân ven biển, thể hiện qua các lễ hội Nghinh Ông tại một số làng chài. Dinh Cậu — một miếu thờ nhỏ trên ghềnh đá cửa sông Dương Đông — là điểm tín ngưỡng và ngắm hoàng hôn nổi tiếng gắn liền với tín ngưỡng dân gian của ngư dân đảo. Chợ đêm Phú Quốc (khu Bãi Trường/Dương Đông) là nơi thể hiện rõ nét văn hóa ẩm thực hải sản và giao lưu du khách về đêm.",
+    "keywords": [
+      "văn hóa Phú Quốc",
+      "Dinh Cậu",
+      "lễ hội Nghinh Ông",
+      "tín ngưỡng ngư dân đảo ngọc"
+    ],
+    "source": "Tổng hợp thông tin văn hóa du lịch công khai",
+    "source_type": "public_web",
+    "source_url": "https://vi.wikipedia.org/wiki/Ph%C3%BA_Qu%E1%BB%91c",
+    "last_updated": "2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng.",
+    "data_version": "kb_v1.3_2026-09-11"
+  },
+  {
+    "kb_id": "KB_DN_CUL_001",
+    "source_id": "DOC_DANANG_CULTURE_2026",
+    "title": "Lễ hội pháo hoa quốc tế Đà Nẵng (DIFF)",
+    "category": "CULTURE_ETIQUETTE",
+    "location": "Đà Nẵng",
+    "city_alias": [],
+    "content": "Lễ hội Pháo hoa Quốc tế Đà Nẵng (DIFF – Da Nang International Fireworks Festival) là sự kiện văn hóa – du lịch thường niên lớn của thành phố, quy tụ các đội pháo hoa quốc tế tranh tài trình diễn trên sông Hàn, thường diễn ra vào mùa hè (khoảng tháng 6). Sự kiện thu hút lượng lớn du khách trong và ngoài nước, kéo theo tình trạng giá phòng tăng cao và đông đúc giao thông khu vực trung tâm/ven sông Hàn vào các đêm thi đấu; du khách có kế hoạch tới Đà Nẵng đúng dịp DIFF nên đặt phòng và vé xem sớm.",
+    "keywords": [
+      "DIFF Đà Nẵng",
+      "lễ hội pháo hoa quốc tế",
+      "sông Hàn sự kiện",
+      "du lịch Đà Nẵng mùa hè"
+    ],
+    "source": "Tổng hợp thông tin sự kiện du lịch công khai",
+    "source_type": "public_web",
+    "source_url": "https://www.vietnam.travel/things-to-do/weather-and-climate-vietnam",
+    "last_updated": "2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng.",
+    "data_version": "kb_v1.3_2026-09-11"
+  },
+  {
+    "kb_id": "KB_DL_CUL_001",
+    "source_id": "DOC_DALAT_CULTURE_2026",
+    "title": "Văn hóa và lễ hội hoa Đà Lạt",
+    "category": "CULTURE_ETIQUETTE",
+    "location": "Lâm Đồng",
+    "city_alias": [
+      "Đà Lạt"
+    ],
+    "content": "Đà Lạt được mệnh danh là \"thành phố ngàn hoa\", văn hóa trồng hoa gắn liền với lịch sử phát triển đô thị từ thời Pháp thuộc. Festival Hoa Đà Lạt (Lễ hội Hoa Đà Lạt) là sự kiện quy mô cấp tỉnh/quốc gia được tổ chức định kỳ (thường 2 năm/lần) vào khoảng tháng 12, với các hoạt động diễu hành hoa, triển lãm hoa nghệ thuật tại Vườn hoa Thành phố và nhiều địa điểm khác, nhằm quảng bá hình ảnh thành phố và thúc đẩy ngành trồng hoa xuất khẩu của Lâm Đồng.",
+    "keywords": [
+      "Festival Hoa Đà Lạt",
+      "văn hóa trồng hoa",
+      "lễ hội hoa Lâm Đồng",
+      "thành phố ngàn hoa"
+    ],
+    "source": "VinWonders Wonderpedia; tổng hợp thông tin sự kiện công khai",
+    "source_type": "public_web",
+    "source_url": "https://vinwonders.com/vi/wonderpedia/news/vuon-hoa-thanh-pho-da-lat/",
+    "last_updated": "2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng.",
+    "data_version": "kb_v1.3_2026-09-11"
+  },
+  {
+    "kb_id": "KB_TOAN_TRP_001",
+    "source_id": "DOC_MIENTRUNG_SELFDRIVE_2026",
+    "title": "Kinh nghiệm thuê xe tự lái xuyên miền Trung",
+    "category": "TRANSPORT_TIPS",
+    "location": "Toàn quốc",
+    "city_alias": [],
+    "content": "Thuê xe tự lái (ô tô hoặc xe máy) để xuyên miền Trung là lựa chọn phổ biến để chủ động lịch trình qua các cung đường đẹp như đèo Hải Vân (Đà Nẵng–Huế) hoặc quốc lộ ven biển Đà Nẵng–Hội An. Người thuê xe máy/ô tô cần có bằng lái phù hợp (bằng lái quốc tế/hợp lệ tại Việt Nam đối với người nước ngoài), kiểm tra kỹ hợp đồng thuê, tình trạng xe, bảo hiểm trước khi nhận xe, và tuân thủ luật giao thông đường bộ Việt Nam (đội mũ bảo hiểm bắt buộc với xe máy, giới hạn tốc độ theo biển báo). Vào mùa mưa bão (tháng 9–12), nên theo dõi cảnh báo sạt lở/ngập đường trước khi di chuyển qua các cung đèo.",
+    "keywords": [
+      "thuê xe tự lái miền Trung",
+      "đèo Hải Vân",
+      "luật giao thông Việt Nam",
+      "bằng lái quốc tế Việt Nam"
+    ],
+    "source": "Tổng hợp thông tin du lịch công khai",
+    "source_type": "public_web",
+    "source_url": "https://www.vietnam.travel/things-to-do/weather-and-climate-vietnam",
+    "last_updated": "2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng.",
+    "data_version": "kb_v1.3_2026-09-11"
+  },
+  {
+    "kb_id": "KB_TOAN_FOOD_001",
+    "source_id": "DOC_MIENTRUNG_SOUVENIR_2026",
+    "title": "Đặc sản nên mua làm quà khi du lịch miền Trung",
+    "category": "LOCAL_CUISINE",
+    "location": "Toàn quốc",
+    "city_alias": [],
+    "content": "Một số đặc sản thường được du khách mua làm quà khi du lịch miền Trung gồm: mè xửng và các loại mứt/kẹo Huế; tré, bánh dừa nướng, khô mực Đà Nẵng; bánh đậu xanh, lồng đèn giấy và cao lầu khô đóng gói tại Hội An; hồ tiêu, nước mắm, rượu sim, khô cá/mực tại Phú Quốc; mứt dâu, atiso, cà phê, rượu vang và các loại trà/hoa khô tại Đà Lạt. Khi mua đặc sản làm quà nên chọn các cửa hàng/thương hiệu uy tín, kiểm tra hạn sử dụng và quy định hải quan nếu mang qua biên giới.",
+    "keywords": [
+      "đặc sản làm quà miền Trung",
+      "quà lưu niệm du lịch",
+      "mè xửng Huế",
+      "cà phê Đà Lạt"
+    ],
+    "source": "Tổng hợp thông tin du lịch công khai",
+    "source_type": "public_web",
+    "source_url": "https://www.vietnam.travel/things-to-do/21-must-try-vietnamese-dishes",
+    "last_updated": "2026-09-11",
+    "scope_and_limitations": "Nội dung đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thông tin về giá vé/thời tiết/lịch lễ hội có thể thay đổi theo thời gian; khuyến nghị re-verify định kỳ (khuyến nghị mỗi 3-6 tháng) trước khi dùng cho quyết định quan trọng.",
+    "data_version": "kb_v1.3_2026-09-11"
+  }
+]

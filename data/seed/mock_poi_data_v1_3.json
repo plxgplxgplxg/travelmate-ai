@@ -1,0 +1,1036 @@
+{
+  "status": "OK",
+  "total": 46,
+  "items": [
+    {
+      "id": "POI_DN_ACC_001",
+      "name": "Khách sạn Mường Thanh Luxury Đà Nẵng",
+      "address": "270 Võ Nguyên Giáp, Phường Bắc Mỹ Phú, Quận Ngũ Hành Sơn",
+      "location": "Đà Nẵng",
+      "category": "ACCOM",
+      "rating": 4.5,
+      "price_info": "Tham khảo từ ~1.500.000 VNĐ/đêm (biến động theo mùa/hạng phòng)",
+      "price_numeric": 1500000,
+      "attributes": [
+        "near_beach",
+        "luxury",
+        "pool",
+        "children_friendly"
+      ],
+      "source": "Muong Thanh Hospitality (trang đặt phòng chính thức)",
+      "city_alias": [],
+      "source_type": "official",
+      "source_url": "https://booking.muongthanh.com/khach-san-muong-thanh-luxury-da-nang",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thay thế cho tên mock trước đây (\"Danang Golden Bay\") bằng khách sạn có thật, sát bờ biển Mỹ Khê. Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_DN_ACC_002",
+      "name": "Canvas Hotel Đà Nẵng",
+      "address": "76 Hà Bổng, Phường Phước Mỹ, Quận Sơn Trà",
+      "location": "Đà Nẵng",
+      "category": "ACCOM",
+      "rating": 4.3,
+      "price_info": "Tham khảo từ ~700.000 VNĐ/đêm",
+      "price_numeric": 700000,
+      "attributes": [
+        "near_beach",
+        "boutique",
+        "wifi"
+      ],
+      "source": "Canvas Hotel (trang chính thức)",
+      "city_alias": [],
+      "source_type": "official",
+      "source_url": "https://canvashotel.com.vn/",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Canvas Hotel là chuỗi khách sạn có thật tại Đà Nẵng, khu vực gần biển Mỹ Khê. Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_DN_ACC_003",
+      "name": "Melia Danang Beach Resort",
+      "address": "19 Trường Sa, Phường Hòa Hải, Quận Ngũ Hành Sơn",
+      "location": "Đà Nẵng",
+      "category": "ACCOM",
+      "rating": 4.6,
+      "price_info": "Tham khảo từ ~2.800.000 VNĐ/đêm (khu nghỉ dưỡng 5 sao)",
+      "price_numeric": 2800000,
+      "attributes": [
+        "near_beach",
+        "luxury",
+        "pool",
+        "elderly_friendly",
+        "quiet"
+      ],
+      "source": "Kayak (tổng hợp OTA); Meliá Hotels International",
+      "city_alias": [],
+      "source_type": "public_web",
+      "source_url": "https://www.vn.kayak.com/Da-Nang-Hotels-Melia-Danang.2127585.len.ksp",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_HUE_ACC_001",
+      "name": "Khách sạn Indochine Palace Huế",
+      "address": "105A Hùng Vương, Phường Phú Hội",
+      "location": "Thừa Thiên Huế",
+      "category": "ACCOM",
+      "rating": 4.6,
+      "price_info": "Tham khảo từ ~2.200.000 VNĐ/đêm (khách sạn 5 sao)",
+      "price_numeric": 2200000,
+      "attributes": [
+        "luxury",
+        "pool",
+        "culture",
+        "elderly_friendly"
+      ],
+      "source": "Indochine Palace (trang chính thức)",
+      "city_alias": [
+        "Huế"
+      ],
+      "source_type": "official",
+      "source_url": "https://www.indochinepalace.com/",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_HUE_ACC_002",
+      "name": "Vietnam Backpacker Hostels Hue",
+      "address": "10 Nguyễn Tri Phương, Phường Phú Hội, TP. Huế",
+      "location": "Thừa Thiên Huế",
+      "category": "ACCOM",
+      "rating": 4.0,
+      "price_info": "Tham khảo từ ~150.000 VNĐ/giường dorm",
+      "price_numeric": 150000,
+      "attributes": [
+        "budget",
+        "social",
+        "wifi"
+      ],
+      "source": "Tổng hợp OTA/aggregator du lịch công khai",
+      "city_alias": [
+        "Huế"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://www.hostelworld.com/hostels/p/",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Đổi tên từ \"Huế Backpackers Hostel\" (mock, chưa xác minh) sang tên thương hiệu hostel phổ biến hơn tại khu vực; khuyến nghị xác minh lại cơ sở cụ thể trước khi dùng production. LƯU Ý: chưa xác định được đây là một cơ sở kinh doanh cụ thể, đang hoạt động, có thể tra cứu độc lập (không tìm thấy hồ sơ xác thực trong phiên rà soát 2026-09-11). Khuyến nghị thay thế bằng một địa điểm thực tế đã xác minh (qua Google Maps/Booking.com/website chính thức) trước khi dùng cho production hoặc test có tính pháp lý. Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_HA_ACC_001",
+      "name": "Hoi An Ancient House Resort & Spa",
+      "address": "377 Cửa Đại, Phường Cẩm An",
+      "location": "Quảng Nam",
+      "category": "ACCOM",
+      "rating": 4.5,
+      "price_info": "Tham khảo từ ~2.000.000 VNĐ/đêm",
+      "price_numeric": 2000000,
+      "attributes": [
+        "culture",
+        "quiet",
+        "pool",
+        "near_beach"
+      ],
+      "source": "Tổng hợp OTA (Booking.com/Agoda) và trang thông tin du lịch Hội An",
+      "city_alias": [
+        "Hội An"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://www.booking.com/hotel/vn/hoi-an-ancient-house-resort-spa.vi.html",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_HA_ACC_002",
+      "name": "Hà An Hotel Hội An",
+      "address": "Đường Âu Cơ, Phường Cẩm An, TP. Hội An (gần bãi biển An Bàng)",
+      "location": "Quảng Nam",
+      "category": "ACCOM",
+      "rating": 4.2,
+      "price_info": "Tham khảo từ ~900.000 VNĐ/đêm",
+      "price_numeric": 900000,
+      "attributes": [
+        "near_beach",
+        "family_friendly"
+      ],
+      "source": "deterministic_mock_v1",
+      "city_alias": [
+        "Hội An"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://www.booking.com/searchresults.vi.html?ss=H%E1%BB%99i+An",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng. LƯU Ý: chưa xác định được đây là một cơ sở kinh doanh cụ thể, đang hoạt động, có thể tra cứu độc lập (không tìm thấy hồ sơ xác thực trong phiên rà soát 2026-09-11). Khuyến nghị thay thế bằng một địa điểm thực tế đã xác minh (qua Google Maps/Booking.com/website chính thức) trước khi dùng cho production hoặc test có tính pháp lý."
+    },
+    {
+      "id": "POI_PQ_ACC_001",
+      "name": "Vinpearl Resort & Spa Phú Quốc",
+      "address": "Bãi Dài, Xã Gành Dầu, TP. Phú Quốc",
+      "location": "Kiên Giang",
+      "category": "ACCOM",
+      "rating": 4.6,
+      "price_info": "Tham khảo từ ~3.000.000 VNĐ/đêm (resort 5 sao)",
+      "price_numeric": 3000000,
+      "attributes": [
+        "luxury",
+        "near_beach",
+        "pool",
+        "children_friendly"
+      ],
+      "source": "Vinpearl (trang chính thức)",
+      "city_alias": [
+        "Phú Quốc"
+      ],
+      "source_type": "official",
+      "source_url": "https://vinpearl.com/vi/vinpearl-resort-spa-phu-quoc",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_PQ_ACC_002",
+      "name": "Mường Thanh Luxury Phú Quốc",
+      "address": "Đường Trần Hưng Đạo, Phường Dương Đông",
+      "location": "Kiên Giang",
+      "category": "ACCOM",
+      "rating": 4.4,
+      "price_info": "Tham khảo từ ~1.800.000 VNĐ/đêm",
+      "price_numeric": 1800000,
+      "attributes": [
+        "near_beach",
+        "elderly_friendly",
+        "pool",
+        "quiet"
+      ],
+      "source": "Muong Thanh Hospitality (trang đặt phòng chính thức)",
+      "city_alias": [
+        "Phú Quốc"
+      ],
+      "source_type": "official",
+      "source_url": "https://booking.muongthanh.com/",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_PQ_ACC_003",
+      "name": "Duc Anh Garden Homestay",
+      "address": "Đường Trần Hưng Đạo, Cửa Lấp, Dương Tơ, TP. Phú Quốc",
+      "location": "Kiên Giang",
+      "category": "ACCOM",
+      "rating": 4.1,
+      "price_info": "Tham khảo từ ~350.000 VNĐ/đêm",
+      "price_numeric": 350000,
+      "attributes": [
+        "budget",
+        "near_beach",
+        "pool"
+      ],
+      "source": "Klook Blog (tổng hợp homestay Phú Quốc)",
+      "city_alias": [
+        "Phú Quốc"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://www.klook.com/vi/blog/homestay-phu-quoc/",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thay thế tên mock \"Phú Quốc Budget Homestay Bãi Trường\" bằng homestay có thật cùng khu vực Bãi Trường/Trần Hưng Đạo. Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_DL_ACC_001",
+      "name": "Ana Mandara Villas Dalat Resort & Spa",
+      "address": "Đường Lê Lai, Phường 5",
+      "location": "Lâm Đồng",
+      "category": "ACCOM",
+      "rating": 4.6,
+      "price_info": "Tham khảo từ ~2.500.000 VNĐ/đêm",
+      "price_numeric": 2500000,
+      "attributes": [
+        "luxury",
+        "quiet",
+        "nature",
+        "elderly_friendly"
+      ],
+      "source": "Ana Mandara Villas Dalat (trang chính thức)",
+      "city_alias": [
+        "Đà Lạt"
+      ],
+      "source_type": "official",
+      "source_url": "https://anamandara-resort.com/",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_DL_ACC_002",
+      "name": "The Kiwi's House Đà Lạt",
+      "address": "Khu vực trung tâm Phường 4, TP. Đà Lạt",
+      "location": "Lâm Đồng",
+      "category": "ACCOM",
+      "rating": 4.3,
+      "price_info": "Tham khảo từ ~400.000 VNĐ/đêm",
+      "price_numeric": 400000,
+      "attributes": [
+        "budget",
+        "cozy",
+        "garden"
+      ],
+      "source": "deterministic_mock_v1",
+      "city_alias": [
+        "Đà Lạt"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://www.booking.com/searchresults.vi.html?ss=%C4%90%C3%A0+L%E1%BA%A1t",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng. LƯU Ý: chưa xác định được đây là một cơ sở kinh doanh cụ thể, đang hoạt động, có thể tra cứu độc lập (không tìm thấy hồ sơ xác thực trong phiên rà soát 2026-09-11). Khuyến nghị thay thế bằng một địa điểm thực tế đã xác minh (qua Google Maps/Booking.com/website chính thức) trước khi dùng cho production hoặc test có tính pháp lý."
+    },
+    {
+      "id": "POI_DN_FOOD_001",
+      "name": "Mì Quảng Bà Mua",
+      "address": "1 Hải Phòng, Quận Hải Châu, Đà Nẵng (thương hiệu có nhiều cơ sở trong thành phố)",
+      "location": "Đà Nẵng",
+      "category": "FOOD",
+      "rating": 4.4,
+      "price_info": "Tham khảo 20.000 - 139.000 VNĐ/tô",
+      "price_numeric": 65000,
+      "attributes": [
+        "local_food",
+        "budget",
+        "family_friendly"
+      ],
+      "source": "Mì Quảng Bà Mua (trang chính thức); Cổng thông tin du lịch Đà Nẵng",
+      "city_alias": [],
+      "source_type": "official",
+      "source_url": "https://myquangbamua.vn/",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_DN_FOOD_002",
+      "name": "Nhà hàng hải sản Bé Mặn",
+      "address": "98 Võ Nguyên Giáp, Phường Phước Mỹ, Quận Sơn Trà",
+      "location": "Đà Nẵng",
+      "category": "FOOD",
+      "rating": 4.2,
+      "price_info": "Tham khảo 150.000 - 500.000 VNĐ/người",
+      "price_numeric": 300000,
+      "attributes": [
+        "seafood",
+        "near_beach"
+      ],
+      "source": "deterministic_mock_v1",
+      "city_alias": [],
+      "source_type": "public_web",
+      "source_url": "https://www.tripadvisor.com.vn/Restaurants-g298085-Da_Nang.html",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng. LƯU Ý: chưa xác định được đây là một cơ sở kinh doanh cụ thể, đang hoạt động, có thể tra cứu độc lập (không tìm thấy hồ sơ xác thực trong phiên rà soát 2026-09-11). Khuyến nghị thay thế bằng một địa điểm thực tế đã xác minh (qua Google Maps/Booking.com/website chính thức) trước khi dùng cho production hoặc test có tính pháp lý."
+    },
+    {
+      "id": "POI_DN_FOOD_003",
+      "name": "Cafe & Nhà hàng view Cầu Rồng",
+      "address": "Đường Bạch Đằng, Quận Hải Châu, Đà Nẵng",
+      "location": "Đà Nẵng",
+      "category": "FOOD",
+      "rating": 4.1,
+      "price_info": "Tham khảo 40.000 - 150.000 VNĐ/món",
+      "price_numeric": 80000,
+      "attributes": [
+        "view",
+        "cafe",
+        "riverside"
+      ],
+      "source": "deterministic_mock_v1",
+      "city_alias": [],
+      "source_type": "public_web",
+      "source_url": "https://www.tripadvisor.com.vn/Restaurants-g298085-Da_Nang.html",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng. LƯU Ý: chưa xác định được đây là một cơ sở kinh doanh cụ thể, đang hoạt động, có thể tra cứu độc lập (không tìm thấy hồ sơ xác thực trong phiên rà soát 2026-09-11). Khuyến nghị thay thế bằng một địa điểm thực tế đã xác minh (qua Google Maps/Booking.com/website chính thức) trước khi dùng cho production hoặc test có tính pháp lý."
+    },
+    {
+      "id": "POI_HUE_FOOD_001",
+      "name": "Bún Bò Huế Mệ Kéo",
+      "address": "20 Bà Triệu, Phường Phú Hội, TP. Huế",
+      "location": "Thừa Thiên Huế",
+      "category": "FOOD",
+      "rating": 4.3,
+      "price_info": "Tham khảo 30.000 - 60.000 VNĐ/tô",
+      "price_numeric": 40000,
+      "attributes": [
+        "local_food",
+        "budget"
+      ],
+      "source": "deterministic_mock_v1",
+      "city_alias": [
+        "Huế"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://www.tripadvisor.com.vn/Restaurants-g298085-Hue.html",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng. LƯU Ý: chưa xác định được đây là một cơ sở kinh doanh cụ thể, đang hoạt động, có thể tra cứu độc lập (không tìm thấy hồ sơ xác thực trong phiên rà soát 2026-09-11). Khuyến nghị thay thế bằng một địa điểm thực tế đã xác minh (qua Google Maps/Booking.com/website chính thức) trước khi dùng cho production hoặc test có tính pháp lý."
+    },
+    {
+      "id": "POI_HUE_FOOD_002",
+      "name": "Nhà hàng Cơm Hến Hoa Đông",
+      "address": "64 Ưng Bình, Cồn Hến, TP. Huế",
+      "location": "Thừa Thiên Huế",
+      "category": "FOOD",
+      "rating": 4.2,
+      "price_info": "Tham khảo 20.000 - 50.000 VNĐ/phần",
+      "price_numeric": 30000,
+      "attributes": [
+        "local_food",
+        "budget"
+      ],
+      "source": "deterministic_mock_v1",
+      "city_alias": [
+        "Huế"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://www.tripadvisor.com.vn/Restaurants-g298085-Hue.html",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng. LƯU Ý: chưa xác định được đây là một cơ sở kinh doanh cụ thể, đang hoạt động, có thể tra cứu độc lập (không tìm thấy hồ sơ xác thực trong phiên rà soát 2026-09-11). Khuyến nghị thay thế bằng một địa điểm thực tế đã xác minh (qua Google Maps/Booking.com/website chính thức) trước khi dùng cho production hoặc test có tính pháp lý."
+    },
+    {
+      "id": "POI_HA_FOOD_001",
+      "name": "Cao Lầu Bà Bé",
+      "address": "Khu vực chợ Hội An, Phường Cẩm Phô, TP. Hội An",
+      "location": "Quảng Nam",
+      "category": "FOOD",
+      "rating": 4.3,
+      "price_info": "Tham khảo 30.000 - 50.000 VNĐ/tô",
+      "price_numeric": 40000,
+      "attributes": [
+        "local_food",
+        "budget"
+      ],
+      "source": "deterministic_mock_v1",
+      "city_alias": [
+        "Hội An"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://www.tripadvisor.com.vn/Restaurants-g298085-Hoi_An.html",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng. LƯU Ý: chưa xác định được đây là một cơ sở kinh doanh cụ thể, đang hoạt động, có thể tra cứu độc lập (không tìm thấy hồ sơ xác thực trong phiên rà soát 2026-09-11). Khuyến nghị thay thế bằng một địa điểm thực tế đã xác minh (qua Google Maps/Booking.com/website chính thức) trước khi dùng cho production hoặc test có tính pháp lý."
+    },
+    {
+      "id": "POI_HA_FOOD_002",
+      "name": "Nhà hàng Morning Glory Hội An",
+      "address": "106 Nguyễn Thái Học, Phường Minh An, TP. Hội An",
+      "location": "Quảng Nam",
+      "category": "FOOD",
+      "rating": 4.5,
+      "price_info": "Tham khảo 100.000 - 250.000 VNĐ/món",
+      "price_numeric": 150000,
+      "attributes": [
+        "local_food",
+        "signature",
+        "tourist_friendly"
+      ],
+      "source": "VietnamOnline.com Restaurant Review; nhà hàng của Chef Ms. Vy",
+      "city_alias": [
+        "Hội An"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://www.vietnamonline.com/restaurant/hoi-an/morning-glory-restaurant.html",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_PQ_FOOD_001",
+      "name": "Bún Quậy Kiến Xây",
+      "address": "Hẻm đối diện 222 Trần Phú, TT. Dương Đông, Phú Quốc",
+      "location": "Kiên Giang",
+      "category": "FOOD",
+      "rating": 4.4,
+      "price_info": "Tham khảo 40.000 - 50.000 VNĐ/tô",
+      "price_numeric": 45000,
+      "attributes": [
+        "local_food",
+        "budget",
+        "signature"
+      ],
+      "source": "VinWonders Wonderpedia; Vinpearl Travel Guide",
+      "city_alias": [
+        "Phú Quốc"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://vinwonders.com/vi/wonderpedia/news/bun-quay-phu-quoc-review-quan-an-ngon-cach-an-chuan-dan-ban-dia/",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_PQ_FOOD_002",
+      "name": "Nhà hàng hải sản Chợ đêm Phú Quốc",
+      "address": "Đường Bạch Đằng, khu Chợ đêm Dinh Cậu, TT. Dương Đông",
+      "location": "Kiên Giang",
+      "category": "FOOD",
+      "rating": 4.0,
+      "price_info": "Tham khảo 150.000 - 500.000 VNĐ/người",
+      "price_numeric": 300000,
+      "attributes": [
+        "seafood",
+        "night_market"
+      ],
+      "source": "deterministic_mock_v1",
+      "city_alias": [
+        "Phú Quốc"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://www.tripadvisor.com.vn/Restaurants-g298086-Phu_Quoc_Island_Kien_Giang_Province.html",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng. LƯU Ý: chưa xác định được đây là một cơ sở kinh doanh cụ thể, đang hoạt động, có thể tra cứu độc lập (không tìm thấy hồ sơ xác thực trong phiên rà soát 2026-09-11). Khuyến nghị thay thế bằng một địa điểm thực tế đã xác minh (qua Google Maps/Booking.com/website chính thức) trước khi dùng cho production hoặc test có tính pháp lý."
+    },
+    {
+      "id": "POI_DL_FOOD_001",
+      "name": "Lẩu Gà Lá É Tao Ngộ",
+      "address": "15 Tăng Bạt Hổ, Phường 1, TP. Đà Lạt",
+      "location": "Lâm Đồng",
+      "category": "FOOD",
+      "rating": 4.3,
+      "price_info": "Tham khảo 150.000 - 300.000 VNĐ/nồi (2-3 người)",
+      "price_numeric": 200000,
+      "attributes": [
+        "local_food",
+        "hotpot"
+      ],
+      "source": "deterministic_mock_v1",
+      "city_alias": [
+        "Đà Lạt"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://www.tripadvisor.com.vn/Restaurants-g298086-Da_Lat_Lam_Dong_Province.html",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng. LƯU Ý: chưa xác định được đây là một cơ sở kinh doanh cụ thể, đang hoạt động, có thể tra cứu độc lập (không tìm thấy hồ sơ xác thực trong phiên rà soát 2026-09-11). Khuyến nghị thay thế bằng một địa điểm thực tế đã xác minh (qua Google Maps/Booking.com/website chính thức) trước khi dùng cho production hoặc test có tính pháp lý."
+    },
+    {
+      "id": "POI_DL_FOOD_002",
+      "name": "Nhà hàng Đà Lạt Rau Rừng",
+      "address": "72 Phan Đình Phùng, Phường 2, TP. Đà Lạt",
+      "location": "Lâm Đồng",
+      "category": "FOOD",
+      "rating": 4.1,
+      "price_info": "Tham khảo 100.000 - 250.000 VNĐ/người",
+      "price_numeric": 150000,
+      "attributes": [
+        "local_food",
+        "vegetarian_friendly"
+      ],
+      "source": "deterministic_mock_v1",
+      "city_alias": [
+        "Đà Lạt"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://www.tripadvisor.com.vn/Restaurants-g298086-Da_Lat_Lam_Dong_Province.html",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng. LƯU Ý: chưa xác định được đây là một cơ sở kinh doanh cụ thể, đang hoạt động, có thể tra cứu độc lập (không tìm thấy hồ sơ xác thực trong phiên rà soát 2026-09-11). Khuyến nghị thay thế bằng một địa điểm thực tế đã xác minh (qua Google Maps/Booking.com/website chính thức) trước khi dùng cho production hoặc test có tính pháp lý."
+    },
+    {
+      "id": "POI_DN_ATT_001",
+      "name": "Khu du lịch Sun World Bà Nà Hills",
+      "address": "Thôn An Sơn, Xã Hòa Ninh, Huyện Hòa Vang",
+      "location": "Đà Nẵng",
+      "category": "ATTRACTION",
+      "rating": 4.6,
+      "price_info": "Tham khảo 500.000 - 1.250.000 VNĐ/vé người lớn tùy loại vé (xem KB_DN_INFO_001)",
+      "price_numeric": 750000,
+      "attributes": [
+        "culture",
+        "nature",
+        "children_friendly"
+      ],
+      "source": "Sun World Ba Na Hills (trang chính thức)",
+      "city_alias": [],
+      "source_type": "official",
+      "source_url": "https://sunworld.vn/vi/banahills/cam-nang-du-lich/bang-gia-ve-va-dich-vu-tai-sun-world-ba-na-hills-nam-2026-19796",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_DN_ATT_002",
+      "name": "Danh thắng Ngũ Hành Sơn",
+      "address": "Đường Huyền Trân Công Chúa, Quận Ngũ Hành Sơn",
+      "location": "Đà Nẵng",
+      "category": "ATTRACTION",
+      "rating": 4.4,
+      "price_info": "Tham khảo ~40.000 VNĐ/vé người lớn (thang máy tính phí riêng)",
+      "price_numeric": 40000,
+      "attributes": [
+        "culture",
+        "nature",
+        "elderly_friendly"
+      ],
+      "source": "Wikipedia tiếng Việt",
+      "city_alias": [],
+      "source_type": "public_web",
+      "source_url": "https://vi.wikipedia.org/wiki/Ng%C5%A9_H%C3%A0nh_S%C6%A1n",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_HUE_ATT_001",
+      "name": "Đại Nội Huế (Hoàng Thành)",
+      "address": "Số 23 Tống Duy Tân, Phường Thuận Hòa",
+      "location": "Thừa Thiên Huế",
+      "category": "ATTRACTION",
+      "rating": 4.7,
+      "price_info": "~200.000 VNĐ/vé người lớn (đã gồm Bảo tàng Cổ vật Cung đình + Điện Kiến Trung); combo 4 điểm ~530.000đ",
+      "price_numeric": 200000,
+      "attributes": [
+        "culture",
+        "elderly_friendly"
+      ],
+      "source": "Cổng Du lịch Quốc gia Việt Nam (vietnamtourism.gov.vn)",
+      "city_alias": [
+        "Huế"
+      ],
+      "source_type": "official",
+      "source_url": "https://vietnamtourism.gov.vn/post/9463",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_HUE_ATT_002",
+      "name": "Lăng Khải Định",
+      "address": "Xã Thủy Bằng, TP. Huế",
+      "location": "Thừa Thiên Huế",
+      "category": "ATTRACTION",
+      "rating": 4.5,
+      "price_info": "Tham khảo ~150.000 VNĐ/vé người lớn (vé lẻ) hoặc theo combo với Đại Nội",
+      "price_numeric": 150000,
+      "attributes": [
+        "culture"
+      ],
+      "source": "Wikipedia tiếng Việt",
+      "city_alias": [
+        "Huế"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://vi.wikipedia.org/wiki/L%C4%83ng_Kh%E1%BA%A3i_%C4%90%E1%BB%8Bnh",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_HA_ATT_001",
+      "name": "Phố cổ Hội An",
+      "address": "Trung tâm Phường Minh An",
+      "location": "Quảng Nam",
+      "category": "ATTRACTION",
+      "rating": 4.8,
+      "price_info": "80.000 VNĐ (khách VN) / 120.000 VNĐ (khách quốc tế), chọn 5 trong danh sách điểm tham quan",
+      "price_numeric": 120000,
+      "attributes": [
+        "culture",
+        "night_life",
+        "elderly_friendly"
+      ],
+      "source": "Quảng Nam Tourism (cổng thông tin du lịch chính thức tỉnh)",
+      "city_alias": [
+        "Hội An"
+      ],
+      "source_type": "official",
+      "source_url": "https://quangnamtourism.com.vn/gia-ve-pho-co-hoi-an/",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_PQ_ATT_001",
+      "name": "VinWonders Phú Quốc",
+      "address": "Bãi Dài, Xã Gành Dầu, TP. Phú Quốc",
+      "location": "Kiên Giang",
+      "category": "ATTRACTION",
+      "rating": 4.6,
+      "price_info": "Tham khảo ~900.000 - 950.000 VNĐ/vé người lớn",
+      "price_numeric": 950000,
+      "attributes": [
+        "children_friendly",
+        "luxury"
+      ],
+      "source": "VinWonders (trang chính thức)",
+      "city_alias": [
+        "Phú Quốc"
+      ],
+      "source_type": "official",
+      "source_url": "https://vinwonders.com/vi/wonderpedia/news/gia-ve-vinwonders-phu-quoc-combo-voucher-hot/",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_DL_ATT_001",
+      "name": "Vườn Hoa Thành Phố Đà Lạt",
+      "address": "Số 2 Phù Đổng Thiên Vương, Phường 8",
+      "location": "Lâm Đồng",
+      "category": "ATTRACTION",
+      "rating": 4.3,
+      "price_info": "Tham khảo ~50.000 - 100.000 VNĐ/vé người lớn (vé một chiều)",
+      "price_numeric": 70000,
+      "attributes": [
+        "nature",
+        "quiet",
+        "budget"
+      ],
+      "source": "VinWonders Wonderpedia",
+      "city_alias": [
+        "Đà Lạt"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://vinwonders.com/vi/wonderpedia/news/vuon-hoa-thanh-pho-da-lat/",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_HUE_ACC_003",
+      "name": "Sunny Riverside Hue Hotel",
+      "address": "22 Nguyễn Sinh Cung, Phường Vỹ Dạ, TP. Huế",
+      "location": "Thừa Thiên Huế",
+      "category": "ACCOM",
+      "rating": 4.1,
+      "price_info": "Tham khảo từ ~500.000 VNĐ/đêm",
+      "price_numeric": 500000,
+      "attributes": [
+        "riverside",
+        "quiet"
+      ],
+      "source": "deterministic_mock_v1",
+      "city_alias": [
+        "Huế"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://www.booking.com/searchresults.vi.html?ss=Hu%E1%BA%BF",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Đổi tên từ \"Huế Riverside Homestay\" (mock, chưa xác minh) sang mô tả loại hình thực tế ven sông Hương. Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng. LƯU Ý: chưa xác định được đây là một cơ sở kinh doanh cụ thể, đang hoạt động, có thể tra cứu độc lập (không tìm thấy hồ sơ xác thực trong phiên rà soát 2026-09-11). Khuyến nghị thay thế bằng một địa điểm thực tế đã xác minh (qua Google Maps/Booking.com/website chính thức) trước khi dùng cho production hoặc test có tính pháp lý."
+    },
+    {
+      "id": "POI_HA_ACC_003",
+      "name": "The Moon River Homestay & Villa",
+      "address": "Gần Bãi biển An Bàng, Phường Cẩm An, TP. Hội An",
+      "location": "Quảng Nam",
+      "category": "ACCOM",
+      "rating": 4.4,
+      "price_info": "Tham khảo từ ~600.000 VNĐ/đêm",
+      "price_numeric": 600000,
+      "attributes": [
+        "near_beach",
+        "quiet",
+        "pool"
+      ],
+      "source": "Booking.com (An Bàng homestay listing)",
+      "city_alias": [
+        "Hội An"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://www.booking.com/homestay/city/vn/an-ban.vi.html",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thay thế tên mock \"An Bàng Retreat Villa\" bằng cơ sở lưu trú có thật gần biển An Bàng. Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_PQ_ACC_004",
+      "name": "Mai Binh Phuong Bungalow",
+      "address": "Đường Trần Hưng Đạo, gần Bãi Trường, Phường Dương Đông, Phú Quốc",
+      "location": "Kiên Giang",
+      "category": "ACCOM",
+      "rating": 4.2,
+      "price_info": "Tham khảo từ ~450.000 VNĐ/đêm",
+      "price_numeric": 450000,
+      "attributes": [
+        "near_beach",
+        "quiet",
+        "garden"
+      ],
+      "source": "Tico Travel (tổng hợp homestay Phú Quốc)",
+      "city_alias": [
+        "Phú Quốc"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://ticotravel.com.vn/homestays/homestay-phu-quoc/",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Thay thế tên mock \"Phú Quốc Serenity Bungalow\" bằng cơ sở lưu trú có thật khu vực Bãi Trường. Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_DL_ACC_003",
+      "name": "Sen Villa Đà Lạt (Garden, phù hợp gia đình có người lớn tuổi)",
+      "address": "5 Hùng Vương, Phường 10, TP. Đà Lạt",
+      "location": "Lâm Đồng",
+      "category": "ACCOM",
+      "rating": 4.2,
+      "price_info": "Tham khảo từ ~1.200.000 VNĐ/đêm",
+      "price_numeric": 1200000,
+      "attributes": [
+        "quiet",
+        "suitable_for_elderly",
+        "garden"
+      ],
+      "source": "deterministic_mock_v1",
+      "city_alias": [
+        "Đà Lạt"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://www.booking.com/searchresults.vi.html?ss=%C4%90%C3%A0+L%E1%BA%A1t",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Đổi tên từ \"Đà Lạt Elderly-Friendly Garden Villa\" (mock, mang tính mô tả thuộc tính hơn là tên doanh nghiệp thật). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng. LƯU Ý: chưa xác định được đây là một cơ sở kinh doanh cụ thể, đang hoạt động, có thể tra cứu độc lập (không tìm thấy hồ sơ xác thực trong phiên rà soát 2026-09-11). Khuyến nghị thay thế bằng một địa điểm thực tế đã xác minh (qua Google Maps/Booking.com/website chính thức) trước khi dùng cho production hoặc test có tính pháp lý."
+    },
+    {
+      "id": "POI_DN_ACC_004",
+      "name": "Mường Thanh Luxury Đà Nẵng (cơ sở Mỹ Khê)",
+      "address": "270 Võ Nguyên Giáp, Phường Phước Mỹ, Đà Nẵng",
+      "location": "Đà Nẵng",
+      "category": "ACCOM",
+      "rating": 4.5,
+      "price_info": "Tham khảo từ ~1.500.000 VNĐ/đêm",
+      "price_numeric": 1500000,
+      "attributes": [
+        "near_beach",
+        "luxury",
+        "pool"
+      ],
+      "source": "Muong Thanh Hospitality (trang đặt phòng chính thức)",
+      "city_alias": [],
+      "source_type": "official",
+      "source_url": "https://booking.muongthanh.com/khach-san-muong-thanh-luxury-da-nang",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). LƯU Ý: cùng thương hiệu/tên với POI_DN_ACC_001 do trùng khách sạn thật; khuyến nghị thay 1 trong 2 bản ghi bằng cơ sở lưu trú khác tại Mỹ Khê khi làm sạch dữ liệu tiếp theo. Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_HUE_ACC_004",
+      "name": "Azerai La Residence Huế",
+      "address": "5 Lê Lợi, Phường Vĩnh Ninh",
+      "location": "Thừa Thiên Huế",
+      "category": "ACCOM",
+      "rating": 4.7,
+      "price_info": "Tham khảo từ ~3.500.000 VNĐ/đêm (khu nghỉ dưỡng art-deco cao cấp)",
+      "price_numeric": 3500000,
+      "attributes": [
+        "luxury",
+        "culture",
+        "quiet",
+        "pool"
+      ],
+      "source": "Azerai (trang chính thức)",
+      "city_alias": [
+        "Huế"
+      ],
+      "source_type": "official",
+      "source_url": "https://azerai.com/resorts/azerai-la-residence-hue",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_HUE_FOOD_003",
+      "name": "Bánh Khoái Thượng Tứ",
+      "address": "8 Đinh Tiên Hoàng, Phường Đông Ba, TP. Huế",
+      "location": "Thừa Thiên Huế",
+      "category": "FOOD",
+      "rating": 4.3,
+      "price_info": "Tham khảo 25.000 - 45.000 VNĐ/cái",
+      "price_numeric": 35000,
+      "attributes": [
+        "local_food",
+        "budget",
+        "signature"
+      ],
+      "source": "deterministic_mock_v1",
+      "city_alias": [
+        "Huế"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://www.tripadvisor.com.vn/Restaurants-g298085-Hue.html",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng. LƯU Ý: chưa xác định được đây là một cơ sở kinh doanh cụ thể, đang hoạt động, có thể tra cứu độc lập (không tìm thấy hồ sơ xác thực trong phiên rà soát 2026-09-11). Khuyến nghị thay thế bằng một địa điểm thực tế đã xác minh (qua Google Maps/Booking.com/website chính thức) trước khi dùng cho production hoặc test có tính pháp lý."
+    },
+    {
+      "id": "POI_HA_FOOD_003",
+      "name": "Bánh Mì Phượng Hội An",
+      "address": "2B Phan Châu Trinh, Phường Minh An",
+      "location": "Quảng Nam",
+      "category": "FOOD",
+      "rating": 4.6,
+      "price_info": "Tham khảo 20.000 - 40.000 VNĐ/ổ",
+      "price_numeric": 30000,
+      "attributes": [
+        "local_food",
+        "budget"
+      ],
+      "source": "VietnamOnline; nhiều bài báo quốc tế (được Anthony Bourdain giới thiệu)",
+      "city_alias": [
+        "Hội An"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://www.tripadvisor.com.vn/Restaurant_Review-g298085-d1007762-Reviews-Banh_Mi_Phuong-Hoi_An_Quang_Nam_Province.html",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_PQ_FOOD_003",
+      "name": "Nhà hàng Sim Sim Phú Quốc",
+      "address": "Đường Trần Hưng Đạo, Phường Dương Đông, Phú Quốc",
+      "location": "Kiên Giang",
+      "category": "FOOD",
+      "rating": 4.0,
+      "price_info": "Tham khảo 100.000 - 300.000 VNĐ/người",
+      "price_numeric": 200000,
+      "attributes": [
+        "local_food",
+        "seafood"
+      ],
+      "source": "deterministic_mock_v1",
+      "city_alias": [
+        "Phú Quốc"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://www.tripadvisor.com.vn/Restaurants-g298086-Phu_Quoc_Island_Kien_Giang_Province.html",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng. LƯU Ý: chưa xác định được đây là một cơ sở kinh doanh cụ thể, đang hoạt động, có thể tra cứu độc lập (không tìm thấy hồ sơ xác thực trong phiên rà soát 2026-09-11). Khuyến nghị thay thế bằng một địa điểm thực tế đã xác minh (qua Google Maps/Booking.com/website chính thức) trước khi dùng cho production hoặc test có tính pháp lý."
+    },
+    {
+      "id": "POI_DL_FOOD_003",
+      "name": "Bánh Tráng Nướng Dì Đinh",
+      "address": "26 Nguyễn Văn Trỗi, Phường 2, TP. Đà Lạt",
+      "location": "Lâm Đồng",
+      "category": "FOOD",
+      "rating": 4.4,
+      "price_info": "Tham khảo 15.000 - 30.000 VNĐ/cái",
+      "price_numeric": 20000,
+      "attributes": [
+        "local_food",
+        "street_food",
+        "budget"
+      ],
+      "source": "deterministic_mock_v1",
+      "city_alias": [
+        "Đà Lạt"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://www.tripadvisor.com.vn/Restaurants-g298086-Da_Lat_Lam_Dong_Province.html",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng. LƯU Ý: chưa xác định được đây là một cơ sở kinh doanh cụ thể, đang hoạt động, có thể tra cứu độc lập (không tìm thấy hồ sơ xác thực trong phiên rà soát 2026-09-11). Khuyến nghị thay thế bằng một địa điểm thực tế đã xác minh (qua Google Maps/Booking.com/website chính thức) trước khi dùng cho production hoặc test có tính pháp lý."
+    },
+    {
+      "id": "POI_DN_FOOD_004",
+      "name": "Bún Chả Cá 109 Nguyễn Chí Thanh",
+      "address": "109 Nguyễn Chí Thanh, Quận Hải Châu, Đà Nẵng",
+      "location": "Đà Nẵng",
+      "category": "FOOD",
+      "rating": 4.3,
+      "price_info": "Tham khảo 25.000 - 45.000 VNĐ/tô",
+      "price_numeric": 35000,
+      "attributes": [
+        "local_food",
+        "budget"
+      ],
+      "source": "deterministic_mock_v1",
+      "city_alias": [],
+      "source_type": "public_web",
+      "source_url": "https://www.tripadvisor.com.vn/Restaurants-g298085-Da_Nang.html",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng. LƯU Ý: chưa xác định được đây là một cơ sở kinh doanh cụ thể, đang hoạt động, có thể tra cứu độc lập (không tìm thấy hồ sơ xác thực trong phiên rà soát 2026-09-11). Khuyến nghị thay thế bằng một địa điểm thực tế đã xác minh (qua Google Maps/Booking.com/website chính thức) trước khi dùng cho production hoặc test có tính pháp lý."
+    },
+    {
+      "id": "POI_DN_ATT_003",
+      "name": "Cầu Vàng - Bà Nà Hills",
+      "address": "Thôn An Sơn, Xã Hòa Ninh, Huyện Hòa Vang",
+      "location": "Đà Nẵng",
+      "category": "ATTRACTION",
+      "rating": 4.7,
+      "price_info": "Không bán vé riêng, đã gồm trong vé vào cổng Sun World Bà Nà Hills (xem KB_DN_INFO_001)",
+      "price_numeric": 0,
+      "attributes": [
+        "culture",
+        "nature",
+        "children_friendly"
+      ],
+      "source": "Wikipedia tiếng Việt",
+      "city_alias": [],
+      "source_type": "public_web",
+      "source_url": "https://vi.wikipedia.org/wiki/C%E1%BA%A7u_V%C3%A0ng",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_HUE_ATT_003",
+      "name": "Chùa Thiên Mụ",
+      "address": "Đường Nguyễn Phúc Nguyên, Phường Kim Long",
+      "location": "Thừa Thiên Huế",
+      "category": "ATTRACTION",
+      "rating": 4.6,
+      "price_info": "Miễn phí (chùa mở cửa tự do, không thu vé tham quan)",
+      "price_numeric": 0,
+      "attributes": [
+        "culture",
+        "elderly_friendly",
+        "quiet"
+      ],
+      "source": "Wikipedia tiếng Việt",
+      "city_alias": [
+        "Huế"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://vi.wikipedia.org/wiki/Ch%C3%B9a_Thi%C3%AAn_M%E1%BB%A5",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_HA_ATT_002",
+      "name": "Rừng dừa Bảy Mẫu Cẩm Thanh",
+      "address": "Xã Cẩm Thanh, TP. Hội An",
+      "location": "Quảng Nam",
+      "category": "ATTRACTION",
+      "rating": 4.4,
+      "price_info": "Tham khảo ~30.000 VNĐ/người (thuyền thúng/hoạt động ngoài vé cơ bản có thể tính phí riêng)",
+      "price_numeric": 30000,
+      "attributes": [
+        "nature",
+        "children_friendly"
+      ],
+      "source": "Wikipedia tiếng Việt",
+      "city_alias": [
+        "Hội An"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://vi.wikipedia.org/wiki/R%E1%BB%ABng_d%E1%BB%ABa_B%E1%BA%A3y_M%E1%BA%ABu",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    },
+    {
+      "id": "POI_PQ_ATT_002",
+      "name": "Dinh Cậu Phú Quốc",
+      "address": "Đường Bạch Đằng, Phường Dương Đông",
+      "location": "Kiên Giang",
+      "category": "ATTRACTION",
+      "rating": 4.3,
+      "price_info": "Miễn phí (điểm tín ngưỡng công cộng, không thu vé)",
+      "price_numeric": 0,
+      "attributes": [
+        "culture",
+        "elderly_friendly",
+        "quiet"
+      ],
+      "source": "deterministic_mock_v1",
+      "city_alias": [
+        "Phú Quốc"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://vi.wikipedia.org/wiki/Ph%C3%BA_Qu%E1%BB%91c",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng. LƯU Ý: chưa xác định được đây là một cơ sở kinh doanh cụ thể, đang hoạt động, có thể tra cứu độc lập (không tìm thấy hồ sơ xác thực trong phiên rà soát 2026-09-11). Khuyến nghị thay thế bằng một địa điểm thực tế đã xác minh (qua Google Maps/Booking.com/website chính thức) trước khi dùng cho production hoặc test có tính pháp lý."
+    },
+    {
+      "id": "POI_DL_ATT_002",
+      "name": "Hồ Xuân Hương Đà Lạt",
+      "address": "Trung tâm Phường 1-2, TP. Đà Lạt",
+      "location": "Lâm Đồng",
+      "category": "ATTRACTION",
+      "rating": 4.5,
+      "price_info": "Miễn phí (không gian công cộng trung tâm thành phố)",
+      "price_numeric": 0,
+      "attributes": [
+        "nature",
+        "quiet",
+        "elderly_friendly",
+        "budget"
+      ],
+      "source": "Wikipedia tiếng Việt",
+      "city_alias": [
+        "Đà Lạt"
+      ],
+      "source_type": "public_web",
+      "source_url": "https://vi.wikipedia.org/wiki/H%E1%BB%93_Xu%C3%A2n_H%C6%B0%C6%A1ng_(h%E1%BB%93_n%C6%B0%E1%BB%9Bc)",
+      "verified_at": "2026-09-11",
+      "scope_and_limitations": "Đã đối chiếu với nguồn public_web/official trong phiên rà soát 2026-09-11 (xem source_url). Giá/rating có thể biến động theo mùa và khuyến mãi, khuyến nghị re-verify định kỳ (3-6 tháng) trước khi dùng cho quyết định quan trọng."
+    }
+  ],
+  "data_version": "poi_v1.3_2026-09-11"
+}
