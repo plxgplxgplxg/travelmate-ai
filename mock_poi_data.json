@@ -1,0 +1,481 @@
+{
+  "status": "OK",
+  "total": 30,
+  "items": [
+    {
+      "id": "POI_DN_ACC_001",
+      "name": "Khách sạn Danang Golden Bay",
+      "address": "15 Đường Bạch Đằng, Quận Hải Châu",
+      "location": "Đà Nẵng",
+      "category": "ACCOM",
+      "rating": 4.6,
+      "price_info": "2,500,000 VND/đêm",
+      "price_numeric": 2500000,
+      "attributes": [
+        "near_beach",
+        "pool",
+        "luxury",
+        "children_friendly"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_DN_ACC_002",
+      "name": "Khách sạn Canvas Đà Nẵng",
+      "address": "76 Hà Bổng, Phường Phước Mỹ, Quận Sơn Trà",
+      "location": "Đà Nẵng",
+      "category": "ACCOM",
+      "rating": 4.3,
+      "price_info": "750,000 VND/đêm",
+      "price_numeric": 750000,
+      "attributes": [
+        "near_beach",
+        "budget",
+        "quiet"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_DN_ACC_003",
+      "name": "Melia Danang Beach Resort",
+      "address": "19 Trường Sa, Phường Hòa Hải, Quận Ngũ Hành Sơn",
+      "location": "Đà Nẵng",
+      "category": "ACCOM",
+      "rating": 4.8,
+      "price_info": "3,800,000 VND/đêm",
+      "price_numeric": 3800000,
+      "attributes": [
+        "near_beach",
+        "luxury",
+        "pool",
+        "elderly_friendly",
+        "quiet"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_HUE_ACC_001",
+      "name": "Khách sạn Indochine Palace Huế",
+      "address": "105A Hùng Vương, Phường Phú Hội",
+      "location": "Thừa Thiên Huế",
+      "category": "ACCOM",
+      "rating": 4.7,
+      "price_info": "2,200,000 VND/đêm",
+      "price_numeric": 2200000,
+      "attributes": [
+        "luxury",
+        "pool",
+        "culture",
+        "elderly_friendly"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_HUE_ACC_002",
+      "name": "Huế Backpackers Hostel",
+      "address": "10 Nguyễn Tri Phương, Phường Phú Hội",
+      "location": "Thừa Thiên Huế",
+      "category": "ACCOM",
+      "rating": 4.2,
+      "price_info": "350,000 VND/đêm",
+      "price_numeric": 350000,
+      "attributes": [
+        "budget",
+        "quiet",
+        "night_life"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_HA_ACC_001",
+      "name": "Hoi An Ancient House Resort & Spa",
+      "address": "377 Cửa Đại, Phường Cẩm An",
+      "location": "Quảng Nam",
+      "category": "ACCOM",
+      "rating": 4.6,
+      "price_info": "1,800,000 VND/đêm",
+      "price_numeric": 1800000,
+      "attributes": [
+        "culture",
+        "quiet",
+        "pool",
+        "near_beach"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_HA_ACC_002",
+      "name": "Hà An Hotel Hội An",
+      "address": "Đường Âu Cơ, Phường Cẩm An (gần bãi biển An Bàng)",
+      "location": "Quảng Nam",
+      "category": "ACCOM",
+      "rating": 4.1,
+      "price_info": "550,000 VND/đêm",
+      "price_numeric": 550000,
+      "attributes": [
+        "budget",
+        "near_beach",
+        "quiet"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_PQ_ACC_001",
+      "name": "Vinpearl Resort & Spa Phú Quốc",
+      "address": "Bãi Dài, Xã Gành Dầu, TP. Phú Quốc",
+      "location": "Kiên Giang",
+      "category": "ACCOM",
+      "rating": 4.8,
+      "price_info": "4,500,000 VND/đêm",
+      "price_numeric": 4500000,
+      "attributes": [
+        "luxury",
+        "near_beach",
+        "pool",
+        "children_friendly"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_PQ_ACC_002",
+      "name": "Mường Thanh Luxury Phú Quốc",
+      "address": "Đường Trần Hưng Đạo, Phường Dương Đông",
+      "location": "Kiên Giang",
+      "category": "ACCOM",
+      "rating": 4.4,
+      "price_info": "1,600,000 VND/đêm",
+      "price_numeric": 1600000,
+      "attributes": [
+        "near_beach",
+        "elderly_friendly",
+        "pool",
+        "quiet"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_PQ_ACC_003",
+      "name": "Phú Quốc Budget Homestay Bãi Trường",
+      "address": "Đường Trần Phú, Bãi Trường, Phường Dương Đông",
+      "location": "Kiên Giang",
+      "category": "ACCOM",
+      "rating": 4.0,
+      "price_info": "450,000 VND/đêm",
+      "price_numeric": 450000,
+      "attributes": [
+        "budget",
+        "near_beach"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_DL_ACC_001",
+      "name": "Ana Mandara Villas Đà Lạt",
+      "address": "Đường Lê Lai, Phường 5",
+      "location": "Lâm Đồng",
+      "category": "ACCOM",
+      "rating": 4.7,
+      "price_info": "2,900,000 VND/đêm",
+      "price_numeric": 2900000,
+      "attributes": [
+        "luxury",
+        "quiet",
+        "nature",
+        "elderly_friendly"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_DL_ACC_002",
+      "name": "Đà Lạt Cozy Homestay",
+      "address": "12 Triệu Việt Vương, Phường 4",
+      "location": "Lâm Đồng",
+      "category": "ACCOM",
+      "rating": 4.3,
+      "price_info": "400,000 VND/đêm",
+      "price_numeric": 400000,
+      "attributes": [
+        "budget",
+        "quiet",
+        "nature"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_DN_FOOD_001",
+      "name": "Quán Mì Quảng Bà Mua",
+      "address": "1 Hải Phòng, Quận Hải Châu",
+      "location": "Đà Nẵng",
+      "category": "FOOD",
+      "rating": 4.5,
+      "price_info": "35,000 - 50,000 VND/tô",
+      "price_numeric": 40000,
+      "attributes": [
+        "local_food",
+        "budget"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_DN_FOOD_002",
+      "name": "Nhà hàng hải sản Bé Mặn",
+      "address": "98 Võ Nguyên Giáp, Phường Phước Mỹ",
+      "location": "Đà Nẵng",
+      "category": "FOOD",
+      "rating": 4.4,
+      "price_info": "150,000 - 400,000 VND/món",
+      "price_numeric": 250000,
+      "attributes": [
+        "seafood",
+        "near_beach"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_DN_FOOD_003",
+      "name": "Cafe & Nhà hàng view Cầu Rồng",
+      "address": "Đường Bạch Đằng, Quận Hải Châu",
+      "location": "Đà Nẵng",
+      "category": "FOOD",
+      "rating": 4.2,
+      "price_info": "40,000 - 90,000 VND/món",
+      "price_numeric": 60000,
+      "attributes": [
+        "night_life",
+        "quiet"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_HUE_FOOD_001",
+      "name": "Quán Bún Bò Huế Mệ Kéo",
+      "address": "20 Bà Triệu, Phường Phú Hội",
+      "location": "Thừa Thiên Huế",
+      "category": "FOOD",
+      "rating": 4.6,
+      "price_info": "30,000 - 45,000 VND/tô",
+      "price_numeric": 35000,
+      "attributes": [
+        "local_food",
+        "budget"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_HUE_FOOD_002",
+      "name": "Nhà hàng Cơm Hến Hoa Đông",
+      "address": "64 Ưng Bình, Cồn Hến",
+      "location": "Thừa Thiên Huế",
+      "category": "FOOD",
+      "rating": 4.3,
+      "price_info": "25,000 - 60,000 VND/món",
+      "price_numeric": 30000,
+      "attributes": [
+        "local_food",
+        "culture",
+        "budget"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_HA_FOOD_001",
+      "name": "Quán Cao Lầu Bà Bé",
+      "address": "16 Trường Minh Giảng, Phường Cẩm Phô",
+      "location": "Quảng Nam",
+      "category": "FOOD",
+      "rating": 4.5,
+      "price_info": "30,000 - 45,000 VND/tô",
+      "price_numeric": 35000,
+      "attributes": [
+        "local_food",
+        "budget",
+        "culture"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_HA_FOOD_002",
+      "name": "Nhà hàng Morning Glory Hội An",
+      "address": "106 Nguyễn Thái Học, Phường Minh An",
+      "location": "Quảng Nam",
+      "category": "FOOD",
+      "rating": 4.7,
+      "price_info": "80,000 - 200,000 VND/món",
+      "price_numeric": 120000,
+      "attributes": [
+        "local_food",
+        "culture"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_PQ_FOOD_001",
+      "name": "Quán Bún Quậy Kiến Xây",
+      "address": "Đường Ngô Quyền, Phường Dương Đông",
+      "location": "Kiên Giang",
+      "category": "FOOD",
+      "rating": 4.4,
+      "price_info": "30,000 - 50,000 VND/tô",
+      "price_numeric": 35000,
+      "attributes": [
+        "local_food",
+        "seafood",
+        "budget"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_PQ_FOOD_002",
+      "name": "Nhà hàng hải sản Chợ đêm Phú Quốc",
+      "address": "Đường Bạch Đằng, Chợ đêm Dinh Cậu",
+      "location": "Kiên Giang",
+      "category": "FOOD",
+      "rating": 4.3,
+      "price_info": "200,000 - 500,000 VND/món",
+      "price_numeric": 300000,
+      "attributes": [
+        "seafood",
+        "night_life"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_DL_FOOD_001",
+      "name": "Quán Lẩu Gà Lá É Tao Ngộ",
+      "address": "15 Tăng Bạt Hổ, Phường 1",
+      "location": "Lâm Đồng",
+      "category": "FOOD",
+      "rating": 4.5,
+      "price_info": "100,000 - 150,000 VND/nồi",
+      "price_numeric": 120000,
+      "attributes": [
+        "local_food",
+        "budget"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_DL_FOOD_002",
+      "name": "Nhà hàng Đà Lạt Rau Rừng",
+      "address": "72 Phan Đình Phùng, Phường 2",
+      "location": "Lâm Đồng",
+      "category": "FOOD",
+      "rating": 4.2,
+      "price_info": "60,000 - 150,000 VND/món",
+      "price_numeric": 90000,
+      "attributes": [
+        "local_food",
+        "nature"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_DN_ATT_001",
+      "name": "Khu du lịch Sun World Bà Nà Hills",
+      "address": "Thôn An Sơn, Xã Hòa Ninh, Huyện Hòa Vang",
+      "location": "Đà Nẵng",
+      "category": "ATTRACTION",
+      "rating": 4.6,
+      "price_info": "950,000 VND/vé người lớn (khách ngoại tỉnh)",
+      "price_numeric": 950000,
+      "attributes": [
+        "culture",
+        "nature",
+        "children_friendly"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_DN_ATT_002",
+      "name": "Danh thắng Ngũ Hành Sơn",
+      "address": "Đường Huyền Trân Công Chúa, Quận Ngũ Hành Sơn",
+      "location": "Đà Nẵng",
+      "category": "ATTRACTION",
+      "rating": 4.4,
+      "price_info": "40,000 VND/vé người lớn",
+      "price_numeric": 40000,
+      "attributes": [
+        "culture",
+        "nature",
+        "elderly_friendly"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_HUE_ATT_001",
+      "name": "Đại Nội Huế (Hoàng Thành)",
+      "address": "Số 23 Tống Duy Tân, Phường Thuận Hòa",
+      "location": "Thừa Thiên Huế",
+      "category": "ATTRACTION",
+      "rating": 4.7,
+      "price_info": "200,000 VND/vé người lớn, 40,000 VND/vé trẻ em",
+      "price_numeric": 200000,
+      "attributes": [
+        "culture",
+        "elderly_friendly"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_HUE_ATT_002",
+      "name": "Lăng Khải Định",
+      "address": "Xã Thủy Bằng, TP. Huế",
+      "location": "Thừa Thiên Huế",
+      "category": "ATTRACTION",
+      "rating": 4.5,
+      "price_info": "150,000 VND/vé người lớn, 30,000 VND/vé trẻ em",
+      "price_numeric": 150000,
+      "attributes": [
+        "culture"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_HA_ATT_001",
+      "name": "Phố cổ Hội An",
+      "address": "Trung tâm Phường Minh An",
+      "location": "Quảng Nam",
+      "category": "ATTRACTION",
+      "rating": 4.8,
+      "price_info": "120,000 VND/vé tham quan phố cổ",
+      "price_numeric": 120000,
+      "attributes": [
+        "culture",
+        "night_life",
+        "elderly_friendly"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_PQ_ATT_001",
+      "name": "VinWonders Phú Quốc",
+      "address": "Bãi Dài, Xã Gành Dầu, TP. Phú Quốc",
+      "location": "Kiên Giang",
+      "category": "ATTRACTION",
+      "rating": 4.6,
+      "price_info": "950,000 VND/vé người lớn, 710,000 VND/vé trẻ em & người cao tuổi",
+      "price_numeric": 950000,
+      "attributes": [
+        "children_friendly",
+        "luxury"
+      ],
+      "source": "deterministic_mock_v1"
+    },
+    {
+      "id": "POI_DL_ATT_001",
+      "name": "Vườn Hoa Thành Phố Đà Lạt",
+      "address": "Số 2 Phù Đổng Thiên Vương, Phường 8",
+      "location": "Lâm Đồng",
+      "category": "ATTRACTION",
+      "rating": 4.3,
+      "price_info": "60,000 VND/vé người lớn",
+      "price_numeric": 60000,
+      "attributes": [
+        "nature",
+        "quiet",
+        "budget"
+      ],
+      "source": "deterministic_mock_v1"
+    }
+  ]
+}

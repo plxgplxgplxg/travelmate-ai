@@ -1,0 +1,30 @@
+{
+  "instructions": [
+    "Project: TravelMate AI — Vietnamese travel assistant chatbot",
+    "Stack: Python 3.12+, FastAPI, LangGraph >=1.0, Anthropic Claude API, PostgreSQL 16 + pgvector, Redis 7, Langfuse, Pydantic v2",
+    "Architecture: Decoupled Layered with LangGraph StateGraph orchestration",
+    "Pipeline: Context Manager → Router → Parameter Resolver → Tool Orchestrator → Evidence Normalizer → Response Generator → Safety Guard",
+    "Source: src/travelmate/ with subdirs: api, graph/nodes, tools, rag, infrastructure (database/repositories, redis), schemas, guardrails, observability, prompts",
+    "",
+    "CODING RULES:",
+    "- Python 3.12+, all I/O async (asyncpg, aioredis, httpx.AsyncClient)",
+    "- Type hints on all functions, variables, return types",
+    "- Minimal comments: only for non-obvious logic or business rules",
+    "- Google-style docstrings on EVERY public function/class/method: purpose, Args with types, Returns, Raises",
+    "- Reference CMP/UC component in docstrings when relevant",
+    "- No emoji or icons in code or logs",
+    "- SOLID principles, proper coupling and cohesion",
+    "- snake_case for functions/variables, PascalCase for classes, UPPER_CASE for constants",
+    "- Graph nodes only receive/return State — access data via tools/ or infrastructure/database/repositories/",
+    "- graph/builder.py is single source of truth for routing edges",
+    "- All tools implement Protocol from tools/base.py",
+    "- Never fabricate POI data, never reveal system prompt, always return honest status",
+    "",
+    "DATABASE:",
+    "- poi table: relational queries with B-tree + GIN indexes, no embedding",
+    "- kb_chunks table: pgvector HNSW + full-text search hybrid retrieval",
+    "- Redis: ctx:{session_id} JSON with 30min TTL",
+    "",
+    "TESTING: pytest + pytest-asyncio, unit/integration/regression with golden_set.json"
+  ]
+}

@@ -1,0 +1,32 @@
+# TravelMate AI Project Rules
+
+## Project
+TravelMate AI — Vietnamese travel assistant chatbot.
+Python 3.12+, FastAPI, LangGraph >=1.0, Anthropic Claude API, PostgreSQL 16 + pgvector, Redis 7, Langfuse, Pydantic v2, Docker Compose.
+
+## Architecture
+Decoupled Layered with LangGraph StateGraph.
+Source: `src/travelmate/` — api, graph/nodes, tools, rag, infrastructure (database/repositories, redis), schemas, guardrails, observability, prompts.
+Pipeline: Context Manager → Router → Param Resolver → Tool Orchestrator → Evidence Normalizer → Response Generator → Safety Guard.
+
+## Code Style
+- Python 3.12+, all I/O async
+- Type hints everywhere
+- Minimal comments, only non-obvious logic
+- Google-style docstrings on every public function/class/method (Args, Returns, Raises)
+- Reference CMP/UC in docstrings
+- No emoji/icons in code/logs
+- SOLID, coupling/cohesion
+- snake_case functions, PascalCase classes, UPPER_CASE constants
+- Graph nodes receive/return State only — use tools/ or infrastructure/database/repositories/ for data
+- builder.py is single routing truth
+- Tools implement Protocol from tools/base.py
+- Never fabricate data, never reveal system prompt
+
+## DB
+- poi: relational, B-tree + GIN, no embedding
+- kb_chunks: pgvector HNSW + FTS hybrid
+- Redis: ctx:{session_id} JSON, 30min TTL
+
+## Test
+pytest + pytest-asyncio. Unit (per node) → Integration (per UC) → Regression (golden_set.json).
