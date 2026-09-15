@@ -6,20 +6,24 @@ strict interface segregation and evidence normalization.
 
 from __future__ import annotations
 
-from typing import Any, Literal
+from typing import Literal
+
 from pydantic import BaseModel, Field
 
 
 class ToolError(BaseModel):
     """Standardized error structure for tool failures."""
+
     code: str | None = Field(default=None, description="System error code (e.g., ERR-TOOL-01)")
     message: str | None = Field(default=None, description="Human readable error message")
 
 
 # === POI Search Contracts ===
 
+
 class PoiSearchRequest(BaseModel):
     """Request parameters for poi_search tool."""
+
     location: str = Field(description="Province or city name (e.g., 'Đà Nẵng')")
     category: str = Field(
         default="ACCOM",
@@ -38,6 +42,7 @@ class PoiSearchRequest(BaseModel):
 
 class PoiItem(BaseModel):
     """Normalized point of interest item returned to Agent."""
+
     id: str = Field(description="POI identifier")
     name: str = Field(description="Display name")
     address: str = Field(description="Full address")
@@ -50,11 +55,14 @@ class PoiItem(BaseModel):
     source_url: str | None = Field(default=None, description="Official website URL")
     source_type: str = Field(default="official", description="Source trust category")
     verified_at: str | None = Field(default=None, description="Verification date YYYY-MM-DD")
-    scope_and_limitations: str | None = Field(default=None, description="Seasonal volatility or limitations note")
+    scope_and_limitations: str | None = Field(
+        default=None, description="Seasonal volatility or limitations note"
+    )
 
 
 class PoiSearchResponse(BaseModel):
     """Normalized response payload from poi_search tool."""
+
     status: Literal["OK", "EMPTY", "TIMEOUT", "BAD_REQUEST", "PROVIDER_ERROR"] = Field(
         default="OK",
         description="Execution status code",
@@ -65,8 +73,10 @@ class PoiSearchResponse(BaseModel):
 
 # === Knowledge Search Contracts ===
 
+
 class KnowledgeSearchRequest(BaseModel):
     """Request parameters for knowledge_search (RAG) tool."""
+
     query: str = Field(description="Search query string")
     top_k: int = Field(default=3, description="Maximum chunk count to retrieve")
     category: str | None = Field(default=None, description="Optional category filter")
@@ -75,6 +85,7 @@ class KnowledgeSearchRequest(BaseModel):
 
 class KnowledgeChunkItem(BaseModel):
     """Individual retrieved and ranked knowledge chunk."""
+
     chunk_id: str = Field(description="Chunk primary identifier")
     source_id: str = Field(description="Source document identifier")
     title: str = Field(description="Article title")
@@ -88,6 +99,7 @@ class KnowledgeChunkItem(BaseModel):
 
 class KnowledgeSearchResponse(BaseModel):
     """Normalized response payload from knowledge_search tool."""
+
     status: Literal["OK", "EMPTY", "ERROR"] = Field(
         default="OK",
         description="Execution status code",

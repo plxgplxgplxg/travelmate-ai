@@ -6,8 +6,8 @@ Provides connection pooling, health checks, and lifecycle teardown using redis.a
 from __future__ import annotations
 
 import redis.asyncio as aioredis
-from redis.asyncio import Redis
 import structlog
+from redis.asyncio import Redis
 
 from src.travelmate.config import settings
 

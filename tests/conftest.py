@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from collections.abc import AsyncIterator
 from typing import Any
+
 import pytest
 
 from src.travelmate.clients.embedding_client import EmbeddingClientProtocol
@@ -143,7 +144,12 @@ class MockPoiRepository(PoiRepositoryProtocol):
         results = [
             p
             for p in self.pois
-            if (loc_lower in p.location.lower() or any(loc_lower in alias.lower() for alias in getattr(p, "city_alias", [])))
+            if (
+                loc_lower in p.location.lower()
+                or any(
+                    loc_lower in alias.lower() for alias in (getattr(p, "city_alias", None) or [])
+                )
+            )
             and p.category.upper() == category.upper()
         ]
         if budget_max is not None:
@@ -235,7 +241,9 @@ class InMemoryCacheManager(CacheManagerProtocol):
     async def set_cached(self, key: str, value: dict[str, Any], ttl_seconds: int = 300) -> None:
         self.cache[key] = value
 
-    async def is_rate_limited(self, identifier: str, limit: int = 60, window_seconds: int = 60) -> bool:
+    async def is_rate_limited(
+        self, identifier: str, limit: int = 60, window_seconds: int = 60
+    ) -> bool:
         count = self.rates.get(identifier, 0) + 1
         self.rates[identifier] = count
         return count > limit
@@ -286,3 +294,24 @@ def sample_context() -> ContextState:
         location=LocationState(value="Đà Nẵng", source="explicit"),
         preferences=["near_beach"],
     )
+
+
+@pytest.fixture
+def sample_state(sample_context: ContextState) -> dict[str, Any]:
+    """Fixture providing a baseline TravelMateState with cyclic loop fields."""
+    return {
+        "session_id": "test_sess_001",
+        "raw_user_input": "Tìm khách sạn ở Đà Nẵng",
+        "context": sample_context.model_dump(),
+        "extracted_params": {},
+        "tool_outputs": [],
+        "evidence": [],
+        "grounded_evidence": "",
+        "final_response": "",
+        "is_safe": True,
+        "turn_count": 1,
+        "tool_iterations": 0,
+        "pending_intents": [],
+        "completed_tools": [],
+        "needs_more_tools": False,
+    }

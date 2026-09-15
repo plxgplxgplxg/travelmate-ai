@@ -5,17 +5,18 @@ Revises:
 Create Date: 2026-09-11 17:00:00.000000
 
 """
-from typing import Sequence, Union
+from collections.abc import Sequence
 
-from alembic import op
 import pgvector.sqlalchemy
 import sqlalchemy as sa
 from sqlalchemy.dialects import postgresql
 
+from alembic import op
+
 revision: str = "001_initial_schema"
-down_revision: Union[str, None] = None
-branch_labels: Union[str, Sequence[str], None] = None
-depends_on: Union[str, Sequence[str], None] = None
+down_revision: str | None = None
+branch_labels: str | Sequence[str] | None = None
+depends_on: str | Sequence[str] | None = None
 
 
 def upgrade() -> None:
@@ -30,7 +31,7 @@ def upgrade() -> None:
         sa.Column("address", sa.Text(), nullable=False),
         sa.Column("location", sa.String(length=128), nullable=False),
         sa.Column("category", sa.String(length=64), nullable=False),
-        sa.Column("rating", sa.Numeric(precision=3, scale=1), server_default="0.0", nullable=False),
+        sa.Column("rating", sa.Float(), server_default="0.0", nullable=False),
         sa.Column("price_numeric", sa.BigInteger(), server_default="0", nullable=False),
         sa.Column("price_info", sa.String(length=128), server_default="", nullable=False),
         sa.Column("attributes", postgresql.JSONB(astext_type=sa.Text()), server_default="[]", nullable=False),
@@ -45,6 +46,7 @@ def upgrade() -> None:
     op.create_index("idx_poi_location_category", "poi", ["location", "category"])
     op.create_index("idx_poi_price", "poi", ["price_numeric"])
     op.create_index("idx_poi_attributes", "poi", ["attributes"], postgresql_using="gin")
+    op.create_index("idx_poi_city_alias", "poi", ["city_alias"], postgresql_using="gin")
 
     # 3. Create kb_chunks table
     op.create_table(
@@ -79,6 +81,7 @@ def upgrade() -> None:
     op.create_index("idx_kb_content_fts", "kb_chunks", ["content_tsvector"], postgresql_using="gin")
     op.create_index("idx_kb_category_location", "kb_chunks", ["category", "location"])
     op.create_index("idx_kb_is_active", "kb_chunks", ["is_active"])
+    op.create_index("idx_kb_city_alias", "kb_chunks", ["city_alias"], postgresql_using="gin")
 
     # 4. Create conversation_log table
     op.create_table(

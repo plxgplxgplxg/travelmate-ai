@@ -8,19 +8,17 @@ from __future__ import annotations
 
 import asyncio
 import json
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-from sqlalchemy.dialects.postgresql import insert
 import structlog
+from sqlalchemy.dialects.postgresql import insert
 
 from src.travelmate.infrastructure.database.models import PoiModel
 from src.travelmate.infrastructure.database.session import close_db, get_db_session, init_db
 
 logger = structlog.get_logger(__name__)
-
-
-from datetime import datetime
 
 
 async def seed_poi(json_file: Path | str | None = None) -> int:

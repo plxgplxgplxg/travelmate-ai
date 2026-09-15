@@ -7,6 +7,7 @@ heterogeneous sources (POI database and Knowledge Base RAG).
 from __future__ import annotations
 
 from typing import Any, Literal
+
 from pydantic import BaseModel, Field
 
 
@@ -34,8 +35,12 @@ class Evidence(BaseModel):
     content: str = Field(description="Normalized factual content")
     source_url: str | None = Field(default=None, description="Official source URL")
     verified_at: str | None = Field(default=None, description="Date of verification (YYYY-MM-DD)")
-    authority_level: str = Field(default="official", description="Origin classification ('official' | 'public_web')")
-    scope_and_limitations: str | None = Field(default=None, description="Seasonal volatility or re-verification note")
+    authority_level: str = Field(
+        default="official", description="Origin classification ('official' | 'public_web')"
+    )
+    scope_and_limitations: str | None = Field(
+        default=None, description="Seasonal volatility or re-verification note"
+    )
     score: float | None = Field(default=None, description="Retrieval or relevance score")
     metadata: dict[str, Any] = Field(
         default_factory=dict,
@@ -83,10 +88,16 @@ class EvidenceCollection(BaseModel):
                 cite_parts.append(f"Cấp độ: {ev.authority_level}")
 
             cite_str = f" ({', '.join(cite_parts)})" if cite_parts else ""
-            notes = f"\n   Lưu ý/Hạn chế: {ev.scope_and_limitations}" if ev.scope_and_limitations else ""
+            notes = (
+                f"\n   Lưu ý/Hạn chế: {ev.scope_and_limitations}"
+                if ev.scope_and_limitations
+                else ""
+            )
 
             if ev.source_type == "poi":
-                poi_lines.append(f"{idx}. [{ev.source_id}] {ev.title}{cite_str}:\n   {ev.content}{notes}")
+                poi_lines.append(
+                    f"{idx}. [{ev.source_id}] {ev.title}{cite_str}:\n   {ev.content}{notes}"
+                )
             else:
                 kb_lines.append(f"- [{ev.source_id}] {ev.title}{cite_str}:\n  {ev.content}{notes}")
 

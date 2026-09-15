@@ -8,10 +8,11 @@ Runs as an offline administrative CLI or scheduled cron job.
 from __future__ import annotations
 
 import asyncio
-from datetime import datetime, timezone
 import json
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
+
 import httpx
 import structlog
 
@@ -41,7 +42,7 @@ async def check_url(
     if verified_at_str:
         try:
             v_date = datetime.strptime(verified_at_str, "%Y-%m-%d").date()
-            days_old = (datetime.now(timezone.utc).date() - v_date).days
+            days_old = (datetime.now(UTC).date() - v_date).days
         except ValueError:
             days_old = None
 
@@ -104,7 +105,7 @@ async def run_freshness_audit() -> dict[str, Any]:
             break
 
     total_targets = len(poi_items) + len(kb_items)
-    logger.info("Starting Freshness Audit", poi_count=len(poi_items), kb_count=len(kb_items))
+    logger.info("Starting Freshness Audit", poi_count=len(poi_items), kb_count=len(kb_items), total=total_targets)
 
     headers = {"User-Agent": "TravelMate-AI-FreshnessAuditor/1.0"}
     async with httpx.AsyncClient(headers=headers, verify=False) as client:
@@ -138,7 +139,7 @@ async def run_freshness_audit() -> dict[str, Any]:
     stale_items = [r for r in results if r["is_stale"]]
 
     report = {
-        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "timestamp": datetime.now(UTC).isoformat(),
         "total_scanned": len(results),
         "active_urls": alive_count,
         "broken_urls_count": len(broken_items),

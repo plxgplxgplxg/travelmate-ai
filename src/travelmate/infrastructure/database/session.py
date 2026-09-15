@@ -9,7 +9,7 @@ from __future__ import annotations
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 
-from pgvector.asyncpg import register_vector
+import structlog
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import (
     AsyncEngine,
@@ -17,7 +17,6 @@ from sqlalchemy.ext.asyncio import (
     async_sessionmaker,
     create_async_engine,
 )
-import structlog
 
 from src.travelmate.config import settings
 
@@ -56,7 +55,9 @@ def get_session_factory() -> async_sessionmaker[AsyncSession]:
     return _async_session_factory
 
 
-async def init_db(database_url: str | None = None) -> tuple[AsyncEngine, async_sessionmaker[AsyncSession]]:
+async def init_db(
+    database_url: str | None = None,
+) -> tuple[AsyncEngine, async_sessionmaker[AsyncSession]]:
     """Initialize the AsyncEngine and session factory with pgvector codec.
 
     Args:

@@ -6,7 +6,9 @@ for LangGraph nodes and tool executions using clients.langfuse_client.
 
 from __future__ import annotations
 
-from typing import Any, Callable
+from collections.abc import Callable
+from typing import Any
+
 import structlog
 
 from src.travelmate.clients.langfuse_client import get_tracer_client
@@ -35,8 +37,11 @@ def observe_step(name: str | None = None) -> Callable:
     """Decorator for tracing workflow steps with Langfuse observe decorator."""
     try:
         from langfuse.decorators import observe
+
         return observe(name=name)
     except ImportError:
+
         def decorator(func: Callable) -> Callable:
             return func
+
         return decorator

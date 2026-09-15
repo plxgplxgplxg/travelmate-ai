@@ -7,6 +7,7 @@ system prompt disclosures, and ungrounded fabrications.
 from __future__ import annotations
 
 import re
+
 import structlog
 
 logger = structlog.get_logger(__name__)

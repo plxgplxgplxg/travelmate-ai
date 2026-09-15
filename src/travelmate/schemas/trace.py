@@ -8,11 +8,13 @@ from __future__ import annotations
 
 from datetime import datetime
 from typing import Any
+
 from pydantic import BaseModel, Field
 
 
 class ToolCallTrace(BaseModel):
     """Execution telemetry for a single tool call span."""
+
     tool_name: str = Field(description="Name of invoked tool")
     tool_input: dict[str, Any] = Field(description="Input parameters passed to tool")
     tool_output: dict[str, Any] = Field(description="Normalized tool response")
@@ -21,6 +23,7 @@ class ToolCallTrace(BaseModel):
 
 class RetrievalSourceTrace(BaseModel):
     """Source reference retrieved from Knowledge Base."""
+
     chunk_id: str = Field(description="KB Chunk identifier")
     title: str = Field(description="KB Article title")
     score: float = Field(description="RRF retrieval score")
@@ -28,11 +31,14 @@ class RetrievalSourceTrace(BaseModel):
 
 class TraceRecord(BaseModel):
     """Standard execution trace output representing one complete turn processing."""
+
     run_id: str = Field(description="Unique execution run identifier")
     session_id: str = Field(description="Session identifier")
     bot_version: str = Field(default="V1.0", description="Bot release version")
     dataset_case_id: str | None = Field(default=None, description="Golden test case identifier")
-    timestamp: datetime = Field(default_factory=datetime.utcnow, description="Turn execution timestamp")
+    timestamp: datetime = Field(
+        default_factory=datetime.utcnow, description="Turn execution timestamp"
+    )
     raw_user_input: str = Field(description="Original user prompt string")
     selected_route: str = Field(description="Intent route chosen by Router")
     context_before: dict[str, Any] = Field(description="Context state before this turn")

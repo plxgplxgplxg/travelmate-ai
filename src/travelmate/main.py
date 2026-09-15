@@ -6,13 +6,13 @@ CORS middleware, and health checking endpoints.
 
 from __future__ import annotations
 
+from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
-from typing import AsyncIterator
 
+import structlog
 from fastapi import FastAPI, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-import structlog
 
 from src.travelmate.config import settings
 from src.travelmate.infrastructure.database.session import close_db, init_db, ping_db

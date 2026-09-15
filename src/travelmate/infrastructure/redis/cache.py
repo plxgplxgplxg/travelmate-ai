@@ -9,8 +9,9 @@ from __future__ import annotations
 import hashlib
 import json
 from typing import Any, Protocol, runtime_checkable
-from redis.asyncio import Redis
+
 import structlog
+from redis.asyncio import Redis
 
 logger = structlog.get_logger(__name__)
 
@@ -31,7 +32,9 @@ class CacheManagerProtocol(Protocol):
         """Store tool response in cache with TTL."""
         ...
 
-    async def is_rate_limited(self, identifier: str, limit: int = 60, window_seconds: int = 60) -> bool:
+    async def is_rate_limited(
+        self, identifier: str, limit: int = 60, window_seconds: int = 60
+    ) -> bool:
         """Check if request count exceeds limit for identifier."""
         ...
 
@@ -58,7 +61,7 @@ class CacheManager(CacheManagerProtocol):
             Namespaced cache key string 'tool_cache:{hash}'.
         """
         serialized = json.dumps(params, sort_keys=True, ensure_ascii=False)
-        digest = hashlib.md5(f"{tool_name}:{serialized}".encode("utf-8")).hexdigest()
+        digest = hashlib.md5(f"{tool_name}:{serialized}".encode()).hexdigest()
         return f"tool_cache:{digest}"
 
     async def get_cached(self, key: str) -> dict[str, Any] | None:

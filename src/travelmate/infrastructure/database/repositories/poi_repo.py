@@ -6,9 +6,9 @@ and JSONB attribute filtering over PostgreSQL using SQLAlchemy 2.0 async.
 
 from __future__ import annotations
 
-from sqlalchemy import func, select
-from sqlalchemy.ext.asyncio import AsyncSession
 import structlog
+from sqlalchemy import Text, case, func, or_, select
+from sqlalchemy.ext.asyncio import AsyncSession
 
 from src.travelmate.infrastructure.database.models import PoiModel
 from src.travelmate.infrastructure.database.repositories.base import PoiRepositoryProtocol
@@ -50,30 +50,47 @@ class PoiRepository(PoiRepositoryProtocol):
             List of matching PoiModel instances.
         """
         loc_clean = location.strip().lower()
+        loc_raw = location.strip()
         stmt = select(PoiModel).where(
             (func.lower(PoiModel.location).contains(loc_clean))
-            | (PoiModel.city_alias.cast(func.text()).ilike(f"%{loc_clean}%")),
+            | (PoiModel.city_alias.contains([loc_raw]))
+            | (PoiModel.city_alias.cast(Text).ilike(f"%{loc_clean}%")),
             func.upper(PoiModel.category) == category.strip().upper(),
         )
 
+        cat_upper = category.strip().upper()
         if budget_min is not None and budget_min > 0:
-            stmt = stmt.where(PoiModel.price_numeric >= budget_min)
+            if cat_upper == "ATTRACTION":
+                # Free attractions (price 0) are kept unless expressly excluded
+                stmt = stmt.where(
+                    (PoiModel.price_numeric >= budget_min) | (PoiModel.price_numeric == 0)
+                )
+            else:
+                stmt = stmt.where(PoiModel.price_numeric >= budget_min)
 
         if budget_max is not None and budget_max > 0:
             stmt = stmt.where(PoiModel.price_numeric <= budget_max)
 
-        if preferences:
-            # Filter if any of the preferences are present in JSONB attributes
-            for pref in preferences:
-                pref_clean = pref.strip().lower()
-                if pref_clean:
-                    # Match JSONB containment or text search within json array
-                    stmt = stmt.where(
-                        PoiModel.attributes.cast(func.text()).ilike(f"%{pref_clean}%")
-                    )
+        clean_prefs = [p.strip().lower() for p in (preferences or []) if p.strip()]
+        if clean_prefs:
+            # Match entities having any of the preferences, using GIN containment where possible
+            pref_conditions = [
+                PoiModel.attributes.contains([p]) | PoiModel.attributes.cast(Text).ilike(f"%{p}%")
+                for p in clean_prefs
+            ]
+            stmt = stmt.where(or_(*pref_conditions))
+            # Rank candidates by number of matched preferences descending, then rating desc, price asc
+            pref_score = sum(
+                case((PoiModel.attributes.contains([p]), 1), else_=0) for p in clean_prefs
+            )
+            stmt = stmt.order_by(
+                pref_score.desc(), PoiModel.rating.desc(), PoiModel.price_numeric.asc()
+            )
+        else:
+            # Sort by rating descending, then price ascending
+            stmt = stmt.order_by(PoiModel.rating.desc(), PoiModel.price_numeric.asc())
 
-        # Sort by rating descending, then price ascending
-        stmt = stmt.order_by(PoiModel.rating.desc(), PoiModel.price_numeric.asc()).limit(limit)
+        stmt = stmt.limit(limit)
 
         result = await self._session.execute(stmt)
         items = list(result.scalars().all())

@@ -8,7 +8,9 @@ from __future__ import annotations
 
 import asyncio
 import time
-from typing import Protocol, Sequence, runtime_checkable
+from collections.abc import Sequence
+from typing import Protocol, runtime_checkable
+
 import httpx
 import structlog
 
@@ -133,8 +135,14 @@ class HuggingFaceEmbeddingClient(EmbeddingClientProtocol):
         keys = api_keys if api_keys is not None else settings.hf_api_keys
         valid_keys = [k for k in keys if k] or ["hf_dummy_test_key"]
         self.model_name = model_name or settings.embedding_model
-        self.endpoint_url = f"https://api-inference.huggingface.co/pipeline/feature-extraction/{self.model_name}"
-        cooldown = cooldown_seconds if cooldown_seconds is not None else settings.hf_rotation_cooldown_seconds
+        self.endpoint_url = (
+            f"https://api-inference.huggingface.co/pipeline/feature-extraction/{self.model_name}"
+        )
+        cooldown = (
+            cooldown_seconds
+            if cooldown_seconds is not None
+            else settings.hf_rotation_cooldown_seconds
+        )
         self.rotator = HFKeyRotator(valid_keys, default_cooldown_seconds=cooldown)
         self.client = httpx.AsyncClient(timeout=timeout or settings.hf_request_timeout_seconds)
 
@@ -168,7 +176,9 @@ class HuggingFaceEmbeddingClient(EmbeddingClientProtocol):
                         return data
                     elif isinstance(data, list) and data and isinstance(data[0], (int, float)):
                         return [data]
-                    raise EmbeddingServiceError(f"Unexpected response format from HF API: {type(data)}")
+                    raise EmbeddingServiceError(
+                        f"Unexpected response format from HF API: {type(data)}"
+                    )
 
                 if response.status_code == 429:
                     retry_after = response.headers.get("Retry-After")

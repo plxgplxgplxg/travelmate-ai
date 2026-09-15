@@ -8,9 +8,9 @@ Defines schemas and indexes for:
 
 from __future__ import annotations
 
+import uuid
 from datetime import date, datetime
 from typing import Any
-import uuid
 
 from pgvector.sqlalchemy import VECTOR
 from sqlalchemy import (
@@ -20,7 +20,6 @@ from sqlalchemy import (
     DateTime,
     Float,
     Index,
-    Numeric,
     String,
     Text,
     func,
@@ -31,6 +30,7 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 class Base(DeclarativeBase):
     """Base declarative class for all SQLAlchemy entities."""
+
     pass
 
 
@@ -48,7 +48,7 @@ class PoiModel(Base):
     address: Mapped[str] = mapped_column(Text, nullable=False)
     location: Mapped[str] = mapped_column(String(128), nullable=False, index=True)
     category: Mapped[str] = mapped_column(String(64), nullable=False, index=True)
-    rating: Mapped[float] = mapped_column(Numeric(3, 1), default=0.0)
+    rating: Mapped[float] = mapped_column(Float, default=0.0)
     price_numeric: Mapped[int] = mapped_column(BigInteger, default=0, index=True)
     price_info: Mapped[str] = mapped_column(String(128), default="")
     attributes: Mapped[list[str]] = mapped_column(JSONB, default=list)
@@ -68,6 +68,7 @@ class PoiModel(Base):
         Index("idx_poi_location_category", "location", "category"),
         Index("idx_poi_price", "price_numeric"),
         Index("idx_poi_attributes", "attributes", postgresql_using="gin"),
+        Index("idx_poi_city_alias", "city_alias", postgresql_using="gin"),
     )
 
 
@@ -114,6 +115,7 @@ class KbChunkModel(Base):
         Index("idx_kb_content_fts", "content_tsvector", postgresql_using="gin"),
         Index("idx_kb_category_location", "category", "location"),
         Index("idx_kb_is_active", "is_active"),
+        Index("idx_kb_city_alias", "city_alias", postgresql_using="gin"),
     )
 
 

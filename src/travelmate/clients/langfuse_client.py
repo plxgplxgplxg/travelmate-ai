@@ -7,6 +7,7 @@ supporting distributed tracing, generation spans, and graceful flush.
 from __future__ import annotations
 
 from typing import Any, Protocol, runtime_checkable
+
 import structlog
 
 from src.travelmate.config import settings
@@ -46,6 +47,7 @@ class LangfuseClientWrapper(TracerClientProtocol):
         if self.public_key and self.secret_key:
             try:
                 from langfuse import Langfuse
+
                 self._langfuse = Langfuse(
                     public_key=self.public_key,
                     secret_key=self.secret_key,

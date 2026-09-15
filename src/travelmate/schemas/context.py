@@ -6,21 +6,24 @@ for state evolution across turns.
 
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 from typing import Literal
+
 from pydantic import BaseModel, Field
 
 
-class IntentEnum(str, Enum):
+class IntentEnum(StrEnum):
     """Classified intent labels supported by Router (CMP-04)."""
+
     UC01_FIND_PLACE = "UC01_FIND_PLACE"
     UC02_RECOMMEND = "UC02_RECOMMEND"
     UC03_CONTEXT_FLOW = "UC03_CONTEXT_FLOW"
     OUT_OF_SCOPE = "OUT_OF_SCOPE"
 
 
-class ParamProvenance(str, Enum):
+class ParamProvenance(StrEnum):
     """Provenance origin classification for resolved parameters (CMP-05)."""
+
     REQUIRED = "REQUIRED"
     OPTIONAL = "OPTIONAL"
     DERIVED = "DERIVED"
@@ -30,6 +33,7 @@ class ParamProvenance(str, Enum):
 
 class LocationState(BaseModel):
     """Location parameter representation with origin tracking."""
+
     value: str | None = Field(default=None, description="Province or city name")
     source: Literal["explicit", "context", "derived"] = Field(
         default="explicit",
@@ -39,9 +43,10 @@ class LocationState(BaseModel):
 
 class BudgetState(BaseModel):
     """Budget constraint representation preserving original currency."""
+
     amount: int | None = Field(default=None, description="Monetary amount in numeric VND")
     currency: str | None = Field(default="VND", description="Currency code (e.g., VND)")
-    scope: Literal["total", "per_person", "per_night", "unknown"] = Field(
+    scope: Literal["total", "total_trip", "per_person", "per_night", "unknown"] = Field(
         default="unknown",
         description="Scope of the budget constraint",
     )
@@ -49,6 +54,7 @@ class BudgetState(BaseModel):
 
 class TravelerState(BaseModel):
     """Traveler companion profile."""
+
     types: list[str] = Field(
         default_factory=list,
         description="List of traveler types (elderly, children, couple, solo, group)",
@@ -57,6 +63,7 @@ class TravelerState(BaseModel):
 
 class DurationState(BaseModel):
     """Trip duration representation."""
+
     value: int | None = Field(default=None, description="Duration numeric value")
     unit: Literal["day", "night", "weekend", "unknown"] = Field(
         default="unknown",
@@ -66,6 +73,7 @@ class DurationState(BaseModel):
 
 class ResultItem(BaseModel):
     """Cached summary item from previous query results for reference resolution."""
+
     id: str = Field(description="Unique entity identifier")
     name: str = Field(description="Entity name")
     category: str = Field(description="Entity category")
@@ -80,6 +88,7 @@ class ContextState(BaseModel):
 
     Persisted in Redis at ctx:{session_id} and synchronized into LangGraph State.
     """
+
     session_id: str = Field(description="Unique conversation session ID")
     current_intent: IntentEnum = Field(
         default=IntentEnum.UC01_FIND_PLACE,

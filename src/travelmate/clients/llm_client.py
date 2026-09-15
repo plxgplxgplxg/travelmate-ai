@@ -8,8 +8,9 @@ from __future__ import annotations
 
 from collections.abc import AsyncIterator
 from typing import Any, Protocol, runtime_checkable
-from openai import AsyncOpenAI
+
 import structlog
+from openai import AsyncOpenAI
 from tenacity import retry, stop_after_attempt, wait_exponential
 
 from src.travelmate.config import settings

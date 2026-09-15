@@ -7,9 +7,10 @@ to PostgreSQL using SQLAlchemy 2.0 async.
 from __future__ import annotations
 
 from typing import Any
+
+import structlog
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
-import structlog
 
 from src.travelmate.infrastructure.database.models import ConversationLogModel
 from src.travelmate.infrastructure.database.repositories.base import LogRepositoryProtocol
@@ -57,7 +58,9 @@ class LogRepository(LogRepositoryProtocol):
         )
         self._session.add(log_entry)
         await self._session.commit()
-        logger.debug("Logged conversation interaction", session_id=session_id, role=role, intent=intent)
+        logger.debug(
+            "Logged conversation interaction", session_id=session_id, role=role, intent=intent
+        )
 
     async def get_session_history(
         self,
@@ -76,8 +79,9 @@ class LogRepository(LogRepositoryProtocol):
         stmt = (
             select(ConversationLogModel)
             .where(ConversationLogModel.session_id == session_id)
-            .order_by(ConversationLogModel.created_at.asc())
+            .order_by(ConversationLogModel.created_at.desc())
             .limit(limit)
         )
         result = await self._session.execute(stmt)
-        return list(result.scalars().all())
+        items = list(result.scalars().all())
+        return items[::-1]

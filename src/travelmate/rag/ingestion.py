@@ -8,9 +8,10 @@ table through KbRepository.
 from __future__ import annotations
 
 import json
+from datetime import datetime
 from pathlib import Path
 from typing import Any
-from datetime import datetime
+
 import structlog
 
 from src.travelmate.infrastructure.database.repositories.kb_repo import KbRepository
@@ -49,7 +50,13 @@ async def ingest_knowledge_base(
 
     for i in range(0, len(articles), batch_size):
         batch = articles[i : i + batch_size]
-        texts_to_embed = [item["content"] for item in batch]
+        # Combine title, keywords and content to maximize semantic vector retrieval coverage
+        texts_to_embed = [
+            f"{item.get('title', '')}. "
+            f"Từ khóa: {', '.join(item.get('keywords', [])) if isinstance(item.get('keywords'), list) else str(item.get('keywords', ''))}. "
+            f"Nội dung: {item.get('content', '')}"
+            for item in batch
+        ]
 
         # Generate embeddings with E5 passage prefix
         vectors = await embedding_client.embed_documents(texts_to_embed)
@@ -82,7 +89,9 @@ async def ingest_knowledge_base(
             }
             all_chunks.append(chunk_record)
 
-        logger.debug("Embedded batch of KB chunks", batch_index=i // batch_size + 1, batch_size=len(batch))
+        logger.debug(
+            "Embedded batch of KB chunks", batch_index=i // batch_size + 1, batch_size=len(batch)
+        )
 
     count = await kb_repo.upsert_chunks(all_chunks)
     logger.info("Successfully ingested knowledge base into PostgreSQL pgvector", total_chunks=count)

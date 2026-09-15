@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import asyncio
 from pathlib import Path
+
 import structlog
 
 from src.travelmate.clients.embedding_client import HuggingFaceEmbeddingClient
@@ -61,7 +62,7 @@ async def seed_kb(json_file: Path | str | None = None) -> int:
         async with get_db_session() as session:
             kb_repo = KbRepository(session=session)
             count = await ingest_knowledge_base(
-                json_path=path,
+                json_path=resolved_path,
                 kb_repo=kb_repo,
                 embedding_client=embedding_client,
                 batch_size=5,

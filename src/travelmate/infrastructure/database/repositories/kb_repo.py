@@ -7,13 +7,14 @@ Fusion (RRF) for robust grounded retrieval.
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
 import math
+from datetime import UTC, datetime
 from typing import Any
-from sqlalchemy import func, select
+
+import structlog
+from sqlalchemy import Text, func, or_, select
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
-import structlog
 
 from src.travelmate.infrastructure.database.models import KbChunkModel
 from src.travelmate.infrastructure.database.repositories.base import KbRepositoryProtocol
@@ -45,12 +46,13 @@ class KbRepository(KbRepositoryProtocol):
 
         Filters strictly by active documents (is_active=True) and applies exponential
         time-decay weighting based on last_updated to prioritize fresh information.
+        Supports location matching against location name, city_alias array, and 'Toàn quốc' general knowledge.
 
         Args:
             query_text: Raw user query string for FTS ranking.
             query_vector: 768d float embedding vector for cosine ANN.
             category_filter: Optional category constraint.
-            location_filter: Optional location constraint.
+            location_filter: Optional location constraint (e.g. 'Phú Quốc', 'Hội An', 'Đà Nẵng').
             limit: Maximum ranked chunks to return.
             rrf_k: Smoothing constant for Reciprocal Rank Fusion.
 
@@ -60,22 +62,14 @@ class KbRepository(KbRepositoryProtocol):
         candidate_limit = max(limit * 3, 10)
 
         # 1. Semantic Vector Search Query (Active chunks only)
-        vector_stmt = (
-            select(
-                KbChunkModel,
-                KbChunkModel.embedding.cosine_distance(query_vector).label("distance"),
-            )
-            .where(KbChunkModel.is_active.is_(True))
-        )
+        vector_stmt = select(
+            KbChunkModel,
+            KbChunkModel.embedding.cosine_distance(query_vector).label("distance"),
+        ).where(KbChunkModel.is_active.is_(True))
         if category_filter:
             vector_stmt = vector_stmt.where(
                 func.lower(KbChunkModel.category) == category_filter.strip().lower()
             )
-        if location_filter:
-            vector_stmt = vector_stmt.where(
-                func.lower(KbChunkModel.location).contains(location_filter.strip().lower())
-            )
-        vector_stmt = vector_stmt.order_by("distance").limit(candidate_limit)
 
         # 2. Lexical Full-Text Search Query (Active chunks only)
         fts_query = func.plainto_tsquery("simple", query_text)
@@ -102,10 +96,22 @@ class KbRepository(KbRepositoryProtocol):
             lexical_stmt = lexical_stmt.where(
                 func.lower(KbChunkModel.category) == category_filter.strip().lower()
             )
+
+        # Apply location filter with city_alias and nationwide knowledge support
         if location_filter:
-            lexical_stmt = lexical_stmt.where(
-                func.lower(KbChunkModel.location).contains(location_filter.strip().lower())
+            loc_clean = location_filter.strip().lower()
+            loc_raw = location_filter.strip()
+            loc_cond = or_(
+                func.lower(KbChunkModel.location).contains(loc_clean),
+                KbChunkModel.city_alias.contains([loc_raw]),
+                KbChunkModel.city_alias.cast(Text).ilike(f"%{loc_clean}%"),
+                KbChunkModel.location == "Toàn quốc",
+                KbChunkModel.location.is_(None),
             )
+            vector_stmt = vector_stmt.where(loc_cond)
+            lexical_stmt = lexical_stmt.where(loc_cond)
+
+        vector_stmt = vector_stmt.order_by("distance").limit(candidate_limit)
         lexical_stmt = lexical_stmt.order_by(func.desc("rank")).limit(candidate_limit)
 
         # Execute searches
@@ -119,7 +125,7 @@ class KbRepository(KbRepositoryProtocol):
         # 3. Reciprocal Rank Fusion Merge with Recency Time-Decay
         rrf_scores: dict[str, float] = {}
         chunk_map: dict[str, KbChunkModel] = {}
-        today = datetime.now(timezone.utc).date()
+        today = datetime.now(UTC).date()
 
         for rank, row in enumerate(vec_results):
             chunk = row[0]
@@ -170,15 +176,26 @@ class KbRepository(KbRepositoryProtocol):
 
         for chunk_data in chunks:
             content_text = chunk_data.get("content", "")
+            title_text = chunk_data.get("title", "")
+            kw_raw = chunk_data.get("keywords", [])
+            keywords_text = " ".join(kw_raw) if isinstance(kw_raw, list) else str(kw_raw)
+
+            # Multi-field weighted tsvector: title (weight A) + keywords (weight A) + content (weight B)
+            weighted_tsvector = (
+                func.setweight(func.to_tsvector("simple", title_text), "A")
+                .op("||")(func.setweight(func.to_tsvector("simple", keywords_text), "A"))
+                .op("||")(func.setweight(func.to_tsvector("simple", content_text), "B"))
+            )
+
             stmt = insert(KbChunkModel).values(
                 chunk_id=chunk_data["chunk_id"],
                 source_id=chunk_data.get("source_id", "kb"),
-                title=chunk_data.get("title", ""),
+                title=title_text,
                 content=content_text,
                 embedding=chunk_data["embedding"],
                 category=chunk_data.get("category", "general"),
                 location=chunk_data.get("location"),
-                keywords=chunk_data.get("keywords", []),
+                keywords=kw_raw,
                 source=chunk_data.get("source", "knowledge_base_v1"),
                 source_url=chunk_data.get("source_url"),
                 source_type=chunk_data.get("source_type", "official"),
@@ -187,7 +204,7 @@ class KbRepository(KbRepositoryProtocol):
                 scope_and_limitations=chunk_data.get("scope_and_limitations"),
                 is_active=chunk_data.get("is_active", True),
                 last_updated=chunk_data.get("last_updated"),
-                content_tsvector=func.to_tsvector("simple", content_text),
+                content_tsvector=weighted_tsvector,
             )
             stmt = stmt.on_conflict_do_update(
                 index_elements=["chunk_id"],

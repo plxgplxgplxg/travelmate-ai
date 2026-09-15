@@ -8,8 +8,9 @@ from __future__ import annotations
 
 import json
 from typing import Any, Protocol, runtime_checkable
-from redis.asyncio import Redis
+
 import structlog
+from redis.asyncio import Redis
 
 from src.travelmate.config import settings
 
@@ -89,7 +90,9 @@ class SessionStore(SessionStoreProtocol):
         try:
             return json.loads(raw_val)
         except Exception as exc:
-            logger.error("Failed to deserialize session context", session_id=session_id, error=str(exc))
+            logger.error(
+                "Failed to deserialize session context", session_id=session_id, error=str(exc)
+            )
             return None
 
     async def save_context(
