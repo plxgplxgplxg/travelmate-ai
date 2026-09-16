@@ -95,6 +95,36 @@ class KbRepositoryProtocol(Protocol):
         """
         ...
 
+    async def get_existing_chunk_fingerprints(self) -> dict[str, str]:
+        """Fetch content fingerprints (sha256 of title + keywords + content) for all existing chunks.
+
+        Returns:
+            Dictionary mapping chunk_id to sha256 hash string.
+        """
+        ...
+
+    async def deactivate_orphan_chunks(self, active_chunk_ids: list[str]) -> int:
+        """Mark chunks as inactive (is_active=False) if their chunk_id is not in active_chunk_ids.
+
+        Args:
+            active_chunk_ids: List of chunk_ids that currently exist in the source JSON.
+
+        Returns:
+            Number of deactivated orphan chunks.
+        """
+        ...
+
+    async def update_chunk_metadata(self, metadata_records: list[dict[str, Any]]) -> int:
+        """Update non-vector metadata fields for chunks without re-embedding.
+
+        Args:
+            metadata_records: List of chunk dicts containing updated metadata.
+
+        Returns:
+            Number of updated chunks.
+        """
+        ...
+
 
 @runtime_checkable
 class LogRepositoryProtocol(Protocol):

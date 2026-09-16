@@ -45,7 +45,9 @@ def sync_golden_dataset(json_file: Path | str | None = None) -> int:
             break
 
     if not resolved_path:
-        raise FileNotFoundError(f"Golden dataset file not found among candidates: {candidate_paths}")
+        raise FileNotFoundError(
+            f"Golden dataset file not found among candidates: {candidate_paths}"
+        )
 
     path = resolved_path
 
@@ -89,10 +91,14 @@ def sync_golden_dataset(json_file: Path | str | None = None) -> int:
                 },
             )
         except Exception as exc:
-            logger.debug("Item may already exist in dataset", case_id=item["case_id"], error=str(exc))
+            logger.debug(
+                "Item may already exist in dataset", case_id=item["case_id"], error=str(exc)
+            )
 
     tracer_client.flush()
-    logger.info("Successfully synced dataset to Langfuse", dataset_name=dataset_name, count=len(cases))
+    logger.info(
+        "Successfully synced dataset to Langfuse", dataset_name=dataset_name, count=len(cases)
+    )
     return len(cases)
 
 

@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import structlog
 
-from src.travelmate.clients.embedding_client import EmbeddingClientProtocol
+from src.travelmate.clients.base import EmbeddingClientProtocol
 from src.travelmate.infrastructure.database.repositories.base import KbRepositoryProtocol
 from src.travelmate.schemas.tools import KnowledgeChunkItem
 

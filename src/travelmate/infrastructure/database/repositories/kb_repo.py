@@ -7,12 +7,13 @@ Fusion (RRF) for robust grounded retrieval.
 
 from __future__ import annotations
 
+import hashlib
 import math
 from datetime import UTC, datetime
 from typing import Any
 
 import structlog
-from sqlalchemy import Text, func, or_, select
+from sqlalchemy import Text, func, or_, select, update
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -20,6 +21,24 @@ from src.travelmate.infrastructure.database.models import KbChunkModel
 from src.travelmate.infrastructure.database.repositories.base import KbRepositoryProtocol
 
 logger = structlog.get_logger(__name__)
+
+
+def compute_content_hash(title: str, keywords: list[str] | str, content: str) -> str:
+    """Compute SHA-256 fingerprint for document content and keywords.
+
+    Used to skip redundant re-embedding when knowledge base articles are refreshed.
+
+    Args:
+        title: Article title.
+        keywords: Keywords list or string.
+        content: Main body content.
+
+    Returns:
+        Hexadecimal SHA-256 hash string.
+    """
+    kw_str = " ".join(keywords) if isinstance(keywords, list) else str(keywords)
+    raw = f"{title.strip()}|{kw_str.strip()}|{content.strip()}"
+    return hashlib.sha256(raw.encode("utf-8")).hexdigest()
 
 
 class KbRepository(KbRepositoryProtocol):
@@ -231,3 +250,89 @@ class KbRepository(KbRepositoryProtocol):
         await self._session.commit()
         logger.info("Upserted KB chunks into database with metadata", count=len(chunks))
         return len(chunks)
+
+    async def get_existing_chunk_fingerprints(self) -> dict[str, str]:
+        """Fetch content fingerprints (sha256 of title + keywords + content) for all existing chunks.
+
+        Returns:
+            Dictionary mapping chunk_id to sha256 hash string.
+        """
+        stmt = select(
+            KbChunkModel.chunk_id,
+            KbChunkModel.title,
+            KbChunkModel.keywords,
+            KbChunkModel.content,
+        )
+        result = await self._session.execute(stmt)
+        fingerprints: dict[str, str] = {}
+        for row in result.all():
+            chunk_id = row[0]
+            title = row[1]
+            keywords = row[2]
+            content = row[3]
+            fingerprints[chunk_id] = compute_content_hash(
+                title or "", keywords or [], content or ""
+            )
+        return fingerprints
+
+    async def deactivate_orphan_chunks(self, active_chunk_ids: list[str]) -> int:
+        """Mark chunks as inactive (is_active=False) if their chunk_id is not in active_chunk_ids.
+
+        Args:
+            active_chunk_ids: List of chunk_ids that currently exist in the source JSON.
+
+        Returns:
+            Number of deactivated orphan chunks.
+        """
+        if not active_chunk_ids:
+            return 0
+
+        stmt = (
+            update(KbChunkModel)
+            .where(
+                KbChunkModel.chunk_id.not_in(active_chunk_ids),
+                KbChunkModel.is_active.is_(True),
+            )
+            .values(is_active=False)
+        )
+        result = await self._session.execute(stmt)
+        await self._session.commit()
+        deactivated_count = int(result.rowcount)
+        if deactivated_count > 0:
+            logger.info("Deactivated orphan KB chunks", count=deactivated_count)
+        return deactivated_count
+
+    async def update_chunk_metadata(self, metadata_records: list[dict[str, Any]]) -> int:
+        """Update non-vector metadata fields for chunks without re-embedding.
+
+        Args:
+            metadata_records: List of chunk dicts containing updated metadata.
+
+        Returns:
+            Number of updated chunks.
+        """
+        if not metadata_records:
+            return 0
+
+        for meta in metadata_records:
+            stmt = (
+                update(KbChunkModel)
+                .where(KbChunkModel.chunk_id == meta["chunk_id"])
+                .values(
+                    category=meta.get("category", "general"),
+                    location=meta.get("location"),
+                    source=meta.get("source", "knowledge_base_v1"),
+                    source_url=meta.get("source_url"),
+                    source_type=meta.get("source_type", "official"),
+                    data_version=meta.get("data_version", "kb_v1.0"),
+                    city_alias=meta.get("city_alias", []),
+                    scope_and_limitations=meta.get("scope_and_limitations"),
+                    is_active=True,
+                    last_updated=meta.get("last_updated"),
+                )
+            )
+            await self._session.execute(stmt)
+
+        await self._session.commit()
+        logger.debug("Updated metadata for unchanged KB chunks", count=len(metadata_records))
+        return len(metadata_records)

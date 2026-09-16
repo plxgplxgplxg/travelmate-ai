@@ -7,65 +7,18 @@ a decoupled protocol supporting structured outputs, streaming, and error normali
 from __future__ import annotations
 
 from collections.abc import AsyncIterator
-from typing import Any, Protocol, runtime_checkable
+from typing import Any
 
 import structlog
 from openai import AsyncOpenAI
 from tenacity import retry, stop_after_attempt, wait_exponential
 
+from src.travelmate.clients.base import LLMClientError, LLMClientProtocol
 from src.travelmate.config import settings
 
 logger = structlog.get_logger(__name__)
 
-
-class LLMClientError(Exception):
-    """Raised when an external LLM call fails after retries."""
-
-
-@runtime_checkable
-class LLMClientProtocol(Protocol):
-    """Structural interface for LLM completion and streaming services."""
-
-    async def complete(
-        self,
-        messages: list[dict[str, str]],
-        temperature: float | None = None,
-        max_tokens: int | None = None,
-        json_mode: bool = False,
-    ) -> str:
-        """Send chat completion request to LLM.
-
-        Args:
-            messages: List of message dictionaries containing 'role' and 'content'.
-            temperature: Sampling temperature.
-            max_tokens: Maximum tokens in completion.
-            json_mode: When True, enforces JSON object response format.
-
-        Returns:
-            Generated text content string.
-
-        Raises:
-            LLMClientError: On unrecoverable API error.
-        """
-        ...
-
-    async def stream_completion(
-        self,
-        messages: list[dict[str, str]],
-        temperature: float | None = None,
-        max_tokens: int | None = None,
-    ) -> AsyncIterator[str]:
-        """Stream token chunks as they arrive from LLM provider.
-
-        Args:
-            messages: List of message dictionaries.
-            temperature: Sampling temperature.
-            max_tokens: Maximum tokens in completion.
-
-        Yields:
-            Token text chunks.
-        """
-        ...
+__all__ = ["LLMClientError", "LLMClientProtocol", "OpenAILLMClient"]
 
 
 class OpenAILLMClient(LLMClientProtocol):

@@ -105,7 +105,12 @@ async def run_freshness_audit() -> dict[str, Any]:
             break
 
     total_targets = len(poi_items) + len(kb_items)
-    logger.info("Starting Freshness Audit", poi_count=len(poi_items), kb_count=len(kb_items), total=total_targets)
+    logger.info(
+        "Starting Freshness Audit",
+        poi_count=len(poi_items),
+        kb_count=len(kb_items),
+        total=total_targets,
+    )
 
     headers = {"User-Agent": "TravelMate-AI-FreshnessAuditor/1.0"}
     async with httpx.AsyncClient(headers=headers, verify=False) as client:

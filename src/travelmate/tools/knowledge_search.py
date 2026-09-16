@@ -6,14 +6,13 @@ full-text search over knowledge base articles.
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Any
+from typing import Any
 
 import structlog
 
-if TYPE_CHECKING:
-    from src.travelmate.rag.retriever import HybridRetriever
-from src.travelmate.clients.embedding_client import EmbeddingClientProtocol
+from src.travelmate.clients.base import EmbeddingClientProtocol
 from src.travelmate.infrastructure.database.repositories.base import KbRepositoryProtocol
+from src.travelmate.rag.retriever import HybridRetriever
 from src.travelmate.schemas.tools import (
     KnowledgeSearchRequest,
     KnowledgeSearchResponse,
@@ -57,20 +56,18 @@ class KnowledgeSearchTool(ToolProtocol):
         Raises:
             ValueError: If neither a valid retriever nor repository and embedding client are provided.
         """
-        if retriever is not None and hasattr(retriever, "retrieve"):
-            self._retriever = retriever
+        if isinstance(retriever, HybridRetriever) or (
+            retriever is not None and hasattr(retriever, "retrieve")
+        ):
+            self._retriever: HybridRetriever = retriever  # type: ignore[assignment]
         elif (
             isinstance(retriever, KbRepositoryProtocol) or kb_repo is not None
         ) and embedding_client is not None:
-            from src.travelmate.rag.retriever import HybridRetriever
-
             repo = kb_repo if kb_repo is not None else retriever
             self._retriever = HybridRetriever(
                 kb_repo=repo,  # type: ignore[arg-type]
                 embedding_client=embedding_client,
             )
-        elif retriever is not None:
-            self._retriever = retriever
         else:
             raise ValueError(
                 "KnowledgeSearchTool requires either a retriever instance or "

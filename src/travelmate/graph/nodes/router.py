@@ -12,7 +12,7 @@ import structlog
 from langchain_core.runnables import RunnableConfig
 from pydantic import BaseModel, Field
 
-from src.travelmate.clients.llm_client import LLMClientProtocol
+from src.travelmate.clients.base import LLMClientProtocol
 from src.travelmate.graph.state import TravelMateState
 from src.travelmate.schemas.context import IntentEnum
 

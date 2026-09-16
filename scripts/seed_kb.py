@@ -11,7 +11,7 @@ from pathlib import Path
 
 import structlog
 
-from src.travelmate.clients.embedding_client import HuggingFaceEmbeddingClient
+from src.travelmate.clients.hf_embedding_client import HuggingFaceEmbeddingClient
 from src.travelmate.config import settings
 from src.travelmate.infrastructure.database.repositories.kb_repo import KbRepository
 from src.travelmate.infrastructure.database.session import close_db, get_db_session, init_db
@@ -47,7 +47,9 @@ async def seed_kb(json_file: Path | str | None = None) -> int:
             break
 
     if not resolved_path:
-        raise FileNotFoundError(f"Knowledge base file not found among candidates: {candidate_paths}")
+        raise FileNotFoundError(
+            f"Knowledge base file not found among candidates: {candidate_paths}"
+        )
 
     await init_db()
 

@@ -12,18 +12,16 @@ from typing import Annotated
 from fastapi import Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.travelmate.clients.embedding_client import (
+from src.travelmate.clients.base import (
     EmbeddingClientProtocol,
-    HuggingFaceEmbeddingClient,
+    LLMClientProtocol,
 )
+from src.travelmate.clients.hf_embedding_client import HuggingFaceEmbeddingClient
 from src.travelmate.clients.langfuse_client import (
     TracerClientProtocol,
     get_tracer_client,
 )
-from src.travelmate.clients.llm_client import (
-    LLMClientProtocol,
-    OpenAILLMClient,
-)
+from src.travelmate.clients.llm_client import OpenAILLMClient
 from src.travelmate.infrastructure.database.repositories.kb_repo import KbRepository
 from src.travelmate.infrastructure.database.repositories.log_repo import LogRepository
 from src.travelmate.infrastructure.database.repositories.poi_repo import PoiRepository

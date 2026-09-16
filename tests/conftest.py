@@ -11,8 +11,10 @@ from typing import Any
 
 import pytest
 
-from src.travelmate.clients.embedding_client import EmbeddingClientProtocol
-from src.travelmate.clients.llm_client import LLMClientProtocol
+from src.travelmate.clients.base import (
+    EmbeddingClientProtocol,
+    LLMClientProtocol,
+)
 from src.travelmate.infrastructure.database.models import KbChunkModel, PoiModel
 from src.travelmate.infrastructure.database.repositories.base import (
     KbRepositoryProtocol,
@@ -201,7 +203,41 @@ class MockKbRepository(KbRepositoryProtocol):
         return hits[:limit]
 
     async def upsert_chunks(self, chunks: list[dict[str, Any]]) -> int:
+        for chunk in chunks:
+            # Update or append
+            for idx, existing in enumerate(self.chunks):
+                if existing.chunk_id == chunk["chunk_id"]:
+                    self.chunks[idx] = KbChunkModel(**chunk)
+                    break
+            else:
+                self.chunks.append(KbChunkModel(**chunk))
         return len(chunks)
+
+    async def get_existing_chunk_fingerprints(self) -> dict[str, str]:
+        from src.travelmate.infrastructure.database.repositories.kb_repo import compute_content_hash
+
+        return {
+            c.chunk_id: compute_content_hash(c.title, c.keywords or [], c.content)
+            for c in self.chunks
+        }
+
+    async def deactivate_orphan_chunks(self, active_chunk_ids: list[str]) -> int:
+        active_set = set(active_chunk_ids)
+        count = 0
+        for c in self.chunks:
+            if c.chunk_id not in active_set and getattr(c, "is_active", True):
+                c.is_active = False
+                count += 1
+        return count
+
+    async def update_chunk_metadata(self, metadata_records: list[dict[str, Any]]) -> int:
+        meta_map = {m["chunk_id"]: m for m in metadata_records}
+        count = 0
+        for c in self.chunks:
+            if c.chunk_id in meta_map:
+                c.is_active = True
+                count += 1
+        return count
 
 
 class InMemorySessionStore(SessionStoreProtocol):
