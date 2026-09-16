@@ -30,7 +30,7 @@ class RouteClassification(BaseModel):
     confidence: float = Field(
         default=1.0, description="Confidence score of the classification (0.0 to 1.0)"
     )
-    reasoning: str = Field(description="Short rationable for this classification")
+    reasoning: str = Field(description="Short rationale for this classification")
 
 
 ROUTER_SYSTEM_PROMPT = """
@@ -79,11 +79,11 @@ Chỉ trả về JSON đúng schema, không thêm văn bản khác:
 async def router_node(state: TravelMateState, config: RunnableConfig) -> dict[str, Any]:
     """Execute Router node classifying intent.
 
-    Dependencies are injected via LangGraph's RunnableConfig mechanism, elimitnating Service Locator anti-pattern and enabling clean testability.
+    Dependencies are injected via LangGraph's RunnableConfig mechanism, eliminating Service Locator anti-pattern and enabling clean testability.
 
     Args:
         state: Current TravelMateState snapshot.
-        config: LangGraph runtime configuration containing injected deppendencies.
+        config: LangGraph runtime configuration containing injected dependencies.
 
     Returns:
         State update dictionary containing 'current_intent'.

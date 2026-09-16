@@ -131,7 +131,8 @@ async def test_knowledge_search_tool_empty(mock_embedding_client) -> None:
 @pytest.mark.asyncio
 async def test_knowledge_search_tool_bad_request(mock_kb_repo, mock_embedding_client) -> None:
     """Test KnowledgeSearchTool validation failure when query is missing."""
-    tool = KnowledgeSearchTool(kb_repo=mock_kb_repo, embedding_client=mock_embedding_client)
+    retriever = HybridRetriever(kb_repo=mock_kb_repo, embedding_client=mock_embedding_client)
+    tool = KnowledgeSearchTool(retriever=retriever)
     params = {}  # Missing required 'query'
 
     response = await tool.execute(params)
@@ -168,26 +169,26 @@ async def test_knowledge_search_tool_execution_error(mock_embedding_client) -> N
 
 @pytest.mark.asyncio
 async def test_knowledge_search_tool_init_variations(mock_kb_repo, mock_embedding_client) -> None:
-    """Test KnowledgeSearchTool initialization through various DIP contracts."""
+    """Test KnowledgeSearchTool initialization through RetrieverProtocol contract."""
     # 1. Direct HybridRetriever injection
     retriever = HybridRetriever(kb_repo=mock_kb_repo, embedding_client=mock_embedding_client)
     tool1 = KnowledgeSearchTool(retriever)
     res1 = await tool1.execute({"query": "test"})
     assert res1["status"] == "OK"
 
-    # 2. Protocol keyword injection (Phase 7 test convention)
-    tool2 = KnowledgeSearchTool(kb_repo=mock_kb_repo, embedding_client=mock_embedding_client)
+    # 2. Keyword retriever injection
+    tool2 = KnowledgeSearchTool(retriever=retriever)
     res2 = await tool2.execute({"query": "test"})
     assert res2["status"] == "OK"
 
-    # 3. Protocol positional injection
-    tool3 = KnowledgeSearchTool(mock_kb_repo, mock_embedding_client)
-    res3 = await tool3.execute({"query": "test"})
-    assert res3["status"] == "OK"
+    # 3. Custom RetrieverProtocol mock injection
+    class CustomRetriever:
+        async def retrieve(self, query: str, **kwargs: Any) -> list[Any]:
+            return []
 
-    # 4. Invalid initialization raises ValueError
-    with pytest.raises(ValueError, match="KnowledgeSearchTool requires either"):
-        KnowledgeSearchTool()
+    tool3 = KnowledgeSearchTool(retriever=CustomRetriever())  # type: ignore[arg-type]
+    res3 = await tool3.execute({"query": "test"})
+    assert res3["status"] == "EMPTY"
 
 
 @pytest.mark.asyncio
@@ -214,7 +215,8 @@ def test_tool_protocol_compliance(mock_poi_repo, mock_kb_repo, mock_embedding_cl
     import inspect
 
     poi_tool = PoiSearchTool(poi_repo=mock_poi_repo)
-    kb_tool = KnowledgeSearchTool(kb_repo=mock_kb_repo, embedding_client=mock_embedding_client)
+    retriever = HybridRetriever(kb_repo=mock_kb_repo, embedding_client=mock_embedding_client)
+    kb_tool = KnowledgeSearchTool(retriever=retriever)
 
     assert isinstance(poi_tool, ToolProtocol)
     assert isinstance(kb_tool, ToolProtocol)

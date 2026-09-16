@@ -6,6 +6,8 @@ search over PostgreSQL pgvector.
 
 from __future__ import annotations
 
+from typing import Protocol, runtime_checkable
+
 import structlog
 
 from src.travelmate.clients.base import EmbeddingClientProtocol
@@ -13,6 +15,35 @@ from src.travelmate.infrastructure.database.repositories.base import KbRepositor
 from src.travelmate.schemas.tools import KnowledgeChunkItem
 
 logger = structlog.get_logger(__name__)
+
+
+@runtime_checkable
+class RetrieverProtocol(Protocol):
+    """Structural interface for knowledge retrieval services.
+
+    Consumers (e.g. KnowledgeSearchTool) depend on this Protocol
+    rather than the concrete HybridRetriever, adhering to DIP (Rule 3).
+    """
+
+    async def retrieve(
+        self,
+        query: str,
+        category: str | None = None,
+        location: str | None = None,
+        top_k: int = 3,
+    ) -> list[KnowledgeChunkItem]:
+        """Retrieve most relevant knowledge chunks.
+
+        Args:
+            query: User question or search topic.
+            category: Optional category filter.
+            location: Optional destination location filter.
+            top_k: Maximum chunk count to return.
+
+        Returns:
+            List of ranked KnowledgeChunkItem instances.
+        """
+        ...
 
 
 class HybridRetriever:
@@ -31,8 +62,6 @@ class HybridRetriever:
         """
         self._repo = kb_repo
         self._embedding_client = embedding_client
-        self.kb_repo = kb_repo
-        self.embedding_client = embedding_client
 
     async def retrieve(
         self,

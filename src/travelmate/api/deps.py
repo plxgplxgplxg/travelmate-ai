@@ -22,6 +22,11 @@ from src.travelmate.clients.langfuse_client import (
     get_tracer_client,
 )
 from src.travelmate.clients.llm_client import OpenAILLMClient
+from src.travelmate.infrastructure.database.repositories.base import (
+    KbRepositoryProtocol,
+    LogRepositoryProtocol,
+    PoiRepositoryProtocol,
+)
 from src.travelmate.infrastructure.database.repositories.kb_repo import KbRepository
 from src.travelmate.infrastructure.database.repositories.log_repo import LogRepository
 from src.travelmate.infrastructure.database.repositories.poi_repo import PoiRepository
@@ -44,28 +49,28 @@ async def get_db() -> AsyncIterator[AsyncSession]:
 DbSessionDep = Annotated[AsyncSession, Depends(get_db)]
 
 
-def get_poi_repository(session: DbSessionDep) -> PoiRepository:
+def get_poi_repository(session: DbSessionDep) -> PoiRepositoryProtocol:
     """Provide PoiRepository injected with active DB session."""
     return PoiRepository(session=session)
 
 
-PoiRepoDep = Annotated[PoiRepository, Depends(get_poi_repository)]
+PoiRepoDep = Annotated[PoiRepositoryProtocol, Depends(get_poi_repository)]
 
 
-def get_kb_repository(session: DbSessionDep) -> KbRepository:
+def get_kb_repository(session: DbSessionDep) -> KbRepositoryProtocol:
     """Provide KbRepository injected with active DB session."""
     return KbRepository(session=session)
 
 
-KbRepoDep = Annotated[KbRepository, Depends(get_kb_repository)]
+KbRepoDep = Annotated[KbRepositoryProtocol, Depends(get_kb_repository)]
 
 
-def get_log_repository(session: DbSessionDep) -> LogRepository:
+def get_log_repository(session: DbSessionDep) -> LogRepositoryProtocol:
     """Provide LogRepository injected with active DB session."""
     return LogRepository(session=session)
 
 
-LogRepoDep = Annotated[LogRepository, Depends(get_log_repository)]
+LogRepoDep = Annotated[LogRepositoryProtocol, Depends(get_log_repository)]
 
 
 def get_session_store() -> SessionStore:

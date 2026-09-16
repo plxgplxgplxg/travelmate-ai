@@ -90,7 +90,7 @@ async def context_manager_node(state: TravelMateState) -> dict[str, Any]:
         state: Current TravelMateState containing session and turn data.
 
     Returns:
-        Dictionary update for 'context' and initial state fileds"""
+        Dictionary update for 'context' and initial state fields."""
     session_id = state.get("session_id", "default_session")
     raw_input = state.get("raw_user_input", "")
     existing_ctx = state.get("context", {})

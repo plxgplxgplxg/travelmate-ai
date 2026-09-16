@@ -13,12 +13,12 @@ import structlog
 from fastapi import FastAPI, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from src.travelmate.observability.tracer import flush_langfuse, init_langfuse
 
 from src.travelmate.config import settings
 from src.travelmate.infrastructure.database.session import close_db, init_db, ping_db
 from src.travelmate.infrastructure.redis.client import close_redis, init_redis, ping_redis
 from src.travelmate.observability.logger import configure_logging
-from src.travelmate.observability.tracer import flush_langfuse, init_langfuse
 
 logger = structlog.get_logger(__name__)
 
